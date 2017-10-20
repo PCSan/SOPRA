@@ -445,6 +445,20 @@
     
 
 
+    <!-- http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#ER -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#ER"/>
+    
+
+
+    <!-- http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Health -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Health">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Value"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Inform_Patient_On_Damage -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Inform_Patient_On_Damage">
@@ -522,6 +536,7 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Personal1_Acute_Treatment">
         <rdf:type rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Personal"/>
         <SoPrA:IsPartOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Acute_Treatment"/>
+        <SoPrA:RelatedValue rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Health"/>
     </owl:NamedIndividual>
     
 
@@ -737,6 +752,8 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Shared_Acute_Treatment">
         <rdf:type rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Shared"/>
         <SoPrA:IsPartOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Acute_Treatment"/>
+        <SoPrA:RequiredCompetence rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Walk"/>
+        <SoPrA:affordance rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#ER"/>
     </owl:NamedIndividual>
     
 
@@ -1015,6 +1032,14 @@
     
 
 
+    <!-- http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Walk -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Walk">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Competence"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -1085,19 +1110,25 @@
     <rdf:Description rdf:about="urn:swrl#c">
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
     </rdf:Description>
-    <rdf:Description rdf:about="urn:swrl#pc">
+    <rdf:Description rdf:about="urn:swrl#sc">
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
     </rdf:Description>
     <rdf:Description rdf:about="urn:swrl#pp">
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
     </rdf:Description>
-    <rdf:Description rdf:about="urn:swrl#com">
+    <rdf:Description rdf:about="urn:swrl#pc">
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
     </rdf:Description>
-    <rdf:Description rdf:about="urn:swrl#sc">
+    <rdf:Description rdf:about="urn:swrl#val">
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
     </rdf:Description>
     <rdf:Description rdf:about="urn:swrl#sp">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl#com">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl#aff">
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
     </rdf:Description>
     <rdf:Description rdf:about="urn:swrl#ta">
@@ -1154,7 +1185,7 @@
                                                     <rdf:Description>
                                                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
                                                         <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#implements"/>
-                                                        <swrl:argument1 rdf:resource="urn:swrl#s"/>
+                                                        <swrl:argument1 rdf:resource="urn:swrl#sc"/>
                                                         <swrl:argument2 rdf:resource="urn:swrl#p"/>
                                                     </rdf:Description>
                                                 </rdf:first>
@@ -1273,7 +1304,7 @@
                                                     <rdf:Description>
                                                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
                                                         <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#implements"/>
-                                                        <swrl:argument1 rdf:resource="urn:swrl#s"/>
+                                                        <swrl:argument1 rdf:resource="urn:swrl#sc"/>
                                                         <swrl:argument2 rdf:resource="urn:swrl#p"/>
                                                     </rdf:Description>
                                                 </rdf:first>
@@ -1306,7 +1337,7 @@
                                                                                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
                                                                                 <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#affordance"/>
                                                                                 <swrl:argument1 rdf:resource="urn:swrl#sp"/>
-                                                                                <swrl:argument2 rdf:resource="urn:swrl#com"/>
+                                                                                <swrl:argument2 rdf:resource="urn:swrl#aff"/>
                                                                             </rdf:Description>
                                                                         </rdf:first>
                                                                         <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
@@ -1334,7 +1365,7 @@
                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
                         <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#affordance"/>
                         <swrl:argument1 rdf:resource="urn:swrl#sc"/>
-                        <swrl:argument2 rdf:resource="urn:swrl#com"/>
+                        <swrl:argument2 rdf:resource="urn:swrl#aff"/>
                     </rdf:Description>
                 </rdf:first>
                 <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
@@ -1562,8 +1593,8 @@
                                 <rdf:first>
                                     <rdf:Description>
                                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Personal"/>
-                                        <swrl:argument1 rdf:resource="urn:swrl#pc"/>
+                                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Shared"/>
+                                        <swrl:argument1 rdf:resource="urn:swrl#sc"/>
                                     </rdf:Description>
                                 </rdf:first>
                                 <rdf:rest>
@@ -1573,7 +1604,7 @@
                                             <rdf:Description>
                                                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
                                                 <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#IsPartOf"/>
-                                                <swrl:argument1 rdf:resource="urn:swrl#pc"/>
+                                                <swrl:argument1 rdf:resource="urn:swrl#sc"/>
                                                 <swrl:argument2 rdf:resource="urn:swrl#c"/>
                                             </rdf:Description>
                                         </rdf:first>
@@ -1582,10 +1613,9 @@
                                                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
                                                 <rdf:first>
                                                     <rdf:Description>
-                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#implements"/>
-                                                        <swrl:argument1 rdf:resource="urn:swrl#s"/>
-                                                        <swrl:argument2 rdf:resource="urn:swrl#p"/>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Personal"/>
+                                                        <swrl:argument1 rdf:resource="urn:swrl#pp"/>
                                                     </rdf:Description>
                                                 </rdf:first>
                                                 <rdf:rest>
@@ -1593,9 +1623,10 @@
                                                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
                                                         <rdf:first>
                                                             <rdf:Description>
-                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                                                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Personal"/>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#IsPartOf"/>
                                                                 <swrl:argument1 rdf:resource="urn:swrl#pp"/>
+                                                                <swrl:argument2 rdf:resource="urn:swrl#p"/>
                                                             </rdf:Description>
                                                         </rdf:first>
                                                         <rdf:rest>
@@ -1603,10 +1634,9 @@
                                                                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
                                                                 <rdf:first>
                                                                     <rdf:Description>
-                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#IsPartOf"/>
-                                                                        <swrl:argument1 rdf:resource="urn:swrl#pp"/>
-                                                                        <swrl:argument2 rdf:resource="urn:swrl#p"/>
+                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Personal"/>
+                                                                        <swrl:argument1 rdf:resource="urn:swrl#pc"/>
                                                                     </rdf:Description>
                                                                 </rdf:first>
                                                                 <rdf:rest>
@@ -1615,12 +1645,38 @@
                                                                         <rdf:first>
                                                                             <rdf:Description>
                                                                                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#RelatedValue"/>
-                                                                                <swrl:argument1 rdf:resource="urn:swrl#pp"/>
-                                                                                <swrl:argument2 rdf:resource="urn:swrl#com"/>
+                                                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#IsPartOf"/>
+                                                                                <swrl:argument1 rdf:resource="urn:swrl#pc"/>
+                                                                                <swrl:argument2 rdf:resource="urn:swrl#c"/>
                                                                             </rdf:Description>
                                                                         </rdf:first>
-                                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                                        <rdf:rest>
+                                                                            <rdf:Description>
+                                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                                <rdf:first>
+                                                                                    <rdf:Description>
+                                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#implements"/>
+                                                                                        <swrl:argument1 rdf:resource="urn:swrl#sc"/>
+                                                                                        <swrl:argument2 rdf:resource="urn:swrl#p"/>
+                                                                                    </rdf:Description>
+                                                                                </rdf:first>
+                                                                                <rdf:rest>
+                                                                                    <rdf:Description>
+                                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                                        <rdf:first>
+                                                                                            <rdf:Description>
+                                                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#RelatedValue"/>
+                                                                                                <swrl:argument1 rdf:resource="urn:swrl#pp"/>
+                                                                                                <swrl:argument2 rdf:resource="urn:swrl#val"/>
+                                                                                            </rdf:Description>
+                                                                                        </rdf:first>
+                                                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                                                    </rdf:Description>
+                                                                                </rdf:rest>
+                                                                            </rdf:Description>
+                                                                        </rdf:rest>
                                                                     </rdf:Description>
                                                                 </rdf:rest>
                                                             </rdf:Description>
@@ -1645,7 +1701,7 @@
                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
                         <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#RelatedValue"/>
                         <swrl:argument1 rdf:resource="urn:swrl#pc"/>
-                        <swrl:argument2 rdf:resource="urn:swrl#com"/>
+                        <swrl:argument2 rdf:resource="urn:swrl#val"/>
                     </rdf:Description>
                 </rdf:first>
                 <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
