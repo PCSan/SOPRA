@@ -46,25 +46,8 @@
     <!-- http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#DemotedValue -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#DemotedValue">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#RelatedValue"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#relatedValue"/>
         <owl:propertyDisjointWith rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#PromotedValue"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#IsPartOf -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#IsPartOf">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <owl:inverseOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#hasPart"/>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Personal"/>
-                    <rdf:Description rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Shared"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
     </owl:ObjectProperty>
     
 
@@ -72,47 +55,7 @@
     <!-- http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#PromotedValue -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#PromotedValue">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#RelatedValue"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#RelatedValue -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#RelatedValue">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Personal"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Value"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#RequiredCompetence -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#RequiredCompetence">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Shared"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Competence"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Strategy -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Strategy">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Personal"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Activity"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Trigger -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Trigger">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Personal"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#ContextElement"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#relatedValue"/>
     </owl:ObjectProperty>
     
 
@@ -137,9 +80,9 @@
     
 
 
-    <!-- http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#beliefs -->
+    <!-- http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#belief -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#beliefs">
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#belief">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Agent"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Personal"/>
     </owl:ObjectProperty>
@@ -150,6 +93,7 @@
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#hasPart">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#partOf"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Activity"/>
         <rdfs:range>
             <owl:Class>
@@ -163,18 +107,11 @@
     
 
 
-    <!-- http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#implementedBy -->
+    <!-- http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#implementationOf -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#implementedBy">
-        <owl:inverseOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#implements"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#implements -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#implements">
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#implementationOf">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#implementedBy"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Shared"/>
         <rdfs:range>
@@ -189,10 +126,16 @@
     
 
 
+    <!-- http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#implementedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#implementedBy"/>
+    
+
+
     <!-- http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#implementsAllOf -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#implementsAllOf">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#implements"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#implementationOf"/>
         <owl:propertyDisjointWith rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#implementsPartOf"/>
     </owl:ObjectProperty>
     
@@ -201,14 +144,14 @@
     <!-- http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#implementsPartOf -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#implementsPartOf">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#implements"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#implementationOf"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#knows -->
+    <!-- http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#knowledge -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#knows">
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#knowledge">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <owl:inverseOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#recruited"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Agent"/>
@@ -227,10 +170,66 @@
     
 
 
+    <!-- http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#partOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#partOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Personal"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Shared"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#recruited -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#recruited">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#relatedValue -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#relatedValue">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Personal"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Value"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#requiredCompetence -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#requiredCompetence">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Shared"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Competence"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#strategy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#strategy">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Personal"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Activity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#trigger -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#trigger">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Personal"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#ContextElement"/>
     </owl:ObjectProperty>
     
 
@@ -318,14 +317,14 @@
     <owl:Class rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Personal">
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#IsPartOf"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#partOf"/>
                 <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
                 <owl:onClass rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Activity"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Strategy"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#strategy"/>
                 <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
                 <owl:onClass rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Activity"/>
             </owl:Restriction>
@@ -355,14 +354,14 @@
     <owl:Class rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Shared">
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#IsPartOf"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#partOf"/>
                 <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
                 <owl:onClass rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Activity"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#implements"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#implementationOf"/>
                 <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
                 <owl:onClass rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Activity"/>
             </owl:Restriction>
@@ -560,13 +559,13 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Nurse_D">
         <rdf:type rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Agent"/>
-        <SoPrA:beliefs rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Nurse_D_Acute_Treatment"/>
-        <SoPrA:beliefs rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Nurse_D_NurseTriage"/>
-        <SoPrA:beliefs rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Nurse_D_Take_Trainee"/>
-        <SoPrA:knows rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Acute_Treatment"/>
-        <SoPrA:knows rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#NurseTriage"/>
-        <SoPrA:knows rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Take_Patient"/>
-        <SoPrA:knows rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Take_Trainee"/>
+        <SoPrA:belief rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Nurse_D_Acute_Treatment"/>
+        <SoPrA:belief rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Nurse_D_NurseTriage"/>
+        <SoPrA:belief rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Nurse_D_Take_Trainee"/>
+        <SoPrA:knowledge rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Acute_Treatment"/>
+        <SoPrA:knowledge rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#NurseTriage"/>
+        <SoPrA:knowledge rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Take_Patient"/>
+        <SoPrA:knowledge rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Take_Trainee"/>
         <SoPrA:ownedCompetence rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#SocialSkills"/>
         <SoPrA:ownedCompetence rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#TriageExperience"/>
     </owl:NamedIndividual>
@@ -577,7 +576,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Nurse_D_Acute_Treatment">
         <rdf:type rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Personal"/>
-        <SoPrA:IsPartOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Acute_Treatment"/>
+        <SoPrA:partOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Acute_Treatment"/>
     </owl:NamedIndividual>
     
 
@@ -586,7 +585,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Nurse_D_NurseTriage">
         <rdf:type rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Personal"/>
-        <SoPrA:IsPartOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#NurseTriage"/>
+        <SoPrA:partOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#NurseTriage"/>
     </owl:NamedIndividual>
     
 
@@ -595,7 +594,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Nurse_D_Take_Patient">
         <rdf:type rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Personal"/>
-        <SoPrA:IsPartOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Take_Patient"/>
+        <SoPrA:partOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Take_Patient"/>
     </owl:NamedIndividual>
     
 
@@ -604,8 +603,8 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Nurse_D_Take_Trainee">
         <rdf:type rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Personal"/>
-        <SoPrA:IsPartOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Take_Trainee"/>
         <SoPrA:PromotedValue rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Education"/>
+        <SoPrA:partOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Take_Trainee"/>
     </owl:NamedIndividual>
     
 
@@ -614,14 +613,14 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Nurse_M">
         <rdf:type rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Agent"/>
-        <SoPrA:beliefs rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Nurse_M_Acute_Treatment"/>
-        <SoPrA:beliefs rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Nurse_M_NurseTriage"/>
-        <SoPrA:beliefs rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Nurse_M_Take_Patient"/>
-        <SoPrA:beliefs rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Nurse_M_Take_Trainee"/>
-        <SoPrA:knows rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Acute_Treatment"/>
-        <SoPrA:knows rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#NurseTriage"/>
-        <SoPrA:knows rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Take_Patient"/>
-        <SoPrA:knows rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Take_Trainee"/>
+        <SoPrA:belief rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Nurse_M_Acute_Treatment"/>
+        <SoPrA:belief rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Nurse_M_NurseTriage"/>
+        <SoPrA:belief rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Nurse_M_Take_Patient"/>
+        <SoPrA:belief rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Nurse_M_Take_Trainee"/>
+        <SoPrA:knowledge rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Acute_Treatment"/>
+        <SoPrA:knowledge rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#NurseTriage"/>
+        <SoPrA:knowledge rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Take_Patient"/>
+        <SoPrA:knowledge rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Take_Trainee"/>
         <SoPrA:ownedCompetence rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#SocialSkills"/>
     </owl:NamedIndividual>
     
@@ -631,7 +630,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Nurse_M_Acute_Treatment">
         <rdf:type rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Personal"/>
-        <SoPrA:IsPartOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Acute_Treatment"/>
+        <SoPrA:partOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Acute_Treatment"/>
     </owl:NamedIndividual>
     
 
@@ -640,7 +639,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Nurse_M_NurseTriage">
         <rdf:type rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Personal"/>
-        <SoPrA:IsPartOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#NurseTriage"/>
+        <SoPrA:partOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#NurseTriage"/>
     </owl:NamedIndividual>
     
 
@@ -649,7 +648,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Nurse_M_Take_Patient">
         <rdf:type rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Personal"/>
-        <SoPrA:IsPartOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Take_Patient"/>
+        <SoPrA:partOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Take_Patient"/>
     </owl:NamedIndividual>
     
 
@@ -658,8 +657,8 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Nurse_M_Take_Trainee">
         <rdf:type rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Personal"/>
-        <SoPrA:IsPartOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Take_Trainee"/>
         <SoPrA:PromotedValue rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Education"/>
+        <SoPrA:partOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Take_Trainee"/>
     </owl:NamedIndividual>
     
 
@@ -668,14 +667,14 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Nurse_S">
         <rdf:type rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Agent"/>
-        <SoPrA:beliefs rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Nurse_S_Acute_Treatment"/>
-        <SoPrA:beliefs rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Nurse_S_NurseTriage"/>
-        <SoPrA:beliefs rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Nurse_S_Take_Patient"/>
-        <SoPrA:beliefs rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Nurse_S_Take_Trainee"/>
-        <SoPrA:knows rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Acute_Treatment"/>
-        <SoPrA:knows rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#NurseTriage"/>
-        <SoPrA:knows rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Take_Patient"/>
-        <SoPrA:knows rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Take_Trainee"/>
+        <SoPrA:belief rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Nurse_S_Acute_Treatment"/>
+        <SoPrA:belief rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Nurse_S_NurseTriage"/>
+        <SoPrA:belief rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Nurse_S_Take_Patient"/>
+        <SoPrA:belief rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Nurse_S_Take_Trainee"/>
+        <SoPrA:knowledge rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Acute_Treatment"/>
+        <SoPrA:knowledge rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#NurseTriage"/>
+        <SoPrA:knowledge rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Take_Patient"/>
+        <SoPrA:knowledge rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Take_Trainee"/>
         <SoPrA:ownedCompetence rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#SocialSkills"/>
         <SoPrA:ownedCompetence rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#TriageExperience"/>
     </owl:NamedIndividual>
@@ -686,7 +685,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Nurse_S_Acute_Treatment">
         <rdf:type rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Personal"/>
-        <SoPrA:IsPartOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Acute_Treatment"/>
+        <SoPrA:partOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Acute_Treatment"/>
     </owl:NamedIndividual>
     
 
@@ -695,7 +694,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Nurse_S_NurseTriage">
         <rdf:type rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Personal"/>
-        <SoPrA:IsPartOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#NurseTriage"/>
+        <SoPrA:partOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#NurseTriage"/>
     </owl:NamedIndividual>
     
 
@@ -704,7 +703,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Nurse_S_Take_Patient">
         <rdf:type rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Personal"/>
-        <SoPrA:IsPartOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Take_Patient"/>
+        <SoPrA:partOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Take_Patient"/>
     </owl:NamedIndividual>
     
 
@@ -713,8 +712,8 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Nurse_S_Take_Trainee">
         <rdf:type rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Personal"/>
-        <SoPrA:IsPartOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Take_Trainee"/>
         <SoPrA:PromotedValue rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Education"/>
+        <SoPrA:partOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Take_Trainee"/>
     </owl:NamedIndividual>
     
 
@@ -724,30 +723,30 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#OHN">
         <rdf:type rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Agent"/>
         <SoPrA:adheredValue rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Professional"/>
-        <SoPrA:beliefs rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#OHN_Acute_Treatment"/>
-        <SoPrA:beliefs rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#OHN_Assign_To_Team"/>
-        <SoPrA:beliefs rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#OHN_Contact_ER"/>
-        <SoPrA:beliefs rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#OHN_Damage"/>
-        <SoPrA:beliefs rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#OHN_Inform_Patient_On_Damage"/>
-        <SoPrA:beliefs rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#OHN_Inform_Patient_On_Medical"/>
-        <SoPrA:beliefs rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#OHN_Inform_Patient_On_Surgical"/>
-        <SoPrA:beliefs rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#OHN_Inform_Team_On_Damage"/>
-        <SoPrA:beliefs rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#OHN_Inform_Team_On_Medical"/>
-        <SoPrA:beliefs rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#OHN_Inform_Team_On_Surgical"/>
-        <SoPrA:beliefs rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#OHN_Medical"/>
-        <SoPrA:beliefs rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#OHN_Surgical"/>
-        <SoPrA:knows rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Acute_Treatment"/>
-        <SoPrA:knows rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Assign_To_Team"/>
-        <SoPrA:knows rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Contact_ER"/>
-        <SoPrA:knows rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Damage"/>
-        <SoPrA:knows rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Inform_Patient_On_Damage"/>
-        <SoPrA:knows rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Inform_Patient_On_Medical"/>
-        <SoPrA:knows rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Inform_Patient_On_Surgical"/>
-        <SoPrA:knows rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Inform_Team_On_Damage"/>
-        <SoPrA:knows rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Inform_Team_On_Medical"/>
-        <SoPrA:knows rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Inform_Team_On_Surgical"/>
-        <SoPrA:knows rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Medical"/>
-        <SoPrA:knows rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Surgical"/>
+        <SoPrA:belief rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#OHN_Acute_Treatment"/>
+        <SoPrA:belief rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#OHN_Assign_To_Team"/>
+        <SoPrA:belief rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#OHN_Contact_ER"/>
+        <SoPrA:belief rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#OHN_Damage"/>
+        <SoPrA:belief rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#OHN_Inform_Patient_On_Damage"/>
+        <SoPrA:belief rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#OHN_Inform_Patient_On_Medical"/>
+        <SoPrA:belief rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#OHN_Inform_Patient_On_Surgical"/>
+        <SoPrA:belief rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#OHN_Inform_Team_On_Damage"/>
+        <SoPrA:belief rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#OHN_Inform_Team_On_Medical"/>
+        <SoPrA:belief rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#OHN_Inform_Team_On_Surgical"/>
+        <SoPrA:belief rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#OHN_Medical"/>
+        <SoPrA:belief rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#OHN_Surgical"/>
+        <SoPrA:knowledge rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Acute_Treatment"/>
+        <SoPrA:knowledge rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Assign_To_Team"/>
+        <SoPrA:knowledge rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Contact_ER"/>
+        <SoPrA:knowledge rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Damage"/>
+        <SoPrA:knowledge rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Inform_Patient_On_Damage"/>
+        <SoPrA:knowledge rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Inform_Patient_On_Medical"/>
+        <SoPrA:knowledge rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Inform_Patient_On_Surgical"/>
+        <SoPrA:knowledge rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Inform_Team_On_Damage"/>
+        <SoPrA:knowledge rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Inform_Team_On_Medical"/>
+        <SoPrA:knowledge rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Inform_Team_On_Surgical"/>
+        <SoPrA:knowledge rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Medical"/>
+        <SoPrA:knowledge rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Surgical"/>
         <SoPrA:ownedCompetence rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#HasDamageTHNContact"/>
         <SoPrA:ownedCompetence rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#HasMedicalTHNContact"/>
         <SoPrA:ownedCompetence rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#HasSurgicalTHNContact"/>
@@ -760,9 +759,9 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#OHN_Acute_Treatment">
         <rdf:type rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Personal"/>
-        <SoPrA:IsPartOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Acute_Treatment"/>
         <SoPrA:PromotedValue rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Professional"/>
-        <SoPrA:Trigger rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#ER"/>
+        <SoPrA:partOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Acute_Treatment"/>
+        <SoPrA:trigger rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#ER"/>
     </owl:NamedIndividual>
     
 
@@ -771,7 +770,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#OHN_Assign_To_Team">
         <rdf:type rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Personal"/>
-        <SoPrA:IsPartOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Assign_To_Team"/>
+        <SoPrA:partOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Assign_To_Team"/>
     </owl:NamedIndividual>
     
 
@@ -780,7 +779,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#OHN_Contact_ER">
         <rdf:type rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Personal"/>
-        <SoPrA:IsPartOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Contact_ER"/>
+        <SoPrA:partOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Contact_ER"/>
     </owl:NamedIndividual>
     
 
@@ -789,8 +788,8 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#OHN_Damage">
         <rdf:type rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Personal"/>
-        <SoPrA:IsPartOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Damage"/>
-        <SoPrA:Strategy rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Assign_To_Team"/>
+        <SoPrA:partOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Damage"/>
+        <SoPrA:strategy rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Assign_To_Team"/>
     </owl:NamedIndividual>
     
 
@@ -799,8 +798,8 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#OHN_Inform_Patient_On_Damage">
         <rdf:type rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Personal"/>
-        <SoPrA:IsPartOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Inform_Patient_On_Damage"/>
-        <SoPrA:Strategy rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Damage"/>
+        <SoPrA:partOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Inform_Patient_On_Damage"/>
+        <SoPrA:strategy rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Damage"/>
     </owl:NamedIndividual>
     
 
@@ -809,8 +808,8 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#OHN_Inform_Patient_On_Medical">
         <rdf:type rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Personal"/>
-        <SoPrA:IsPartOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Inform_Patient_On_Medical"/>
-        <SoPrA:Strategy rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Medical"/>
+        <SoPrA:partOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Inform_Patient_On_Medical"/>
+        <SoPrA:strategy rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Medical"/>
     </owl:NamedIndividual>
     
 
@@ -819,8 +818,8 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#OHN_Inform_Patient_On_Surgical">
         <rdf:type rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Personal"/>
-        <SoPrA:IsPartOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Inform_Patient_On_Surgical"/>
-        <SoPrA:Strategy rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Surgical"/>
+        <SoPrA:partOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Inform_Patient_On_Surgical"/>
+        <SoPrA:strategy rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Surgical"/>
     </owl:NamedIndividual>
     
 
@@ -829,9 +828,9 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#OHN_Inform_Team_On_Damage">
         <rdf:type rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Personal"/>
-        <SoPrA:IsPartOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Inform_Team_On_Damage"/>
-        <SoPrA:Strategy rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Damage"/>
-        <SoPrA:Trigger rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Phone_Damage_Team"/>
+        <SoPrA:partOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Inform_Team_On_Damage"/>
+        <SoPrA:strategy rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Damage"/>
+        <SoPrA:trigger rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Phone_Damage_Team"/>
     </owl:NamedIndividual>
     
 
@@ -840,9 +839,9 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#OHN_Inform_Team_On_Medical">
         <rdf:type rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Personal"/>
-        <SoPrA:IsPartOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Inform_Team_On_Medical"/>
-        <SoPrA:Strategy rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Medical"/>
-        <SoPrA:Trigger rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Phone_Medical_Team"/>
+        <SoPrA:partOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Inform_Team_On_Medical"/>
+        <SoPrA:strategy rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Medical"/>
+        <SoPrA:trigger rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Phone_Medical_Team"/>
     </owl:NamedIndividual>
     
 
@@ -851,9 +850,9 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#OHN_Inform_Team_On_Surgical">
         <rdf:type rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Personal"/>
-        <SoPrA:IsPartOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Inform_Team_On_Surgical"/>
-        <SoPrA:Strategy rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Surgical"/>
-        <SoPrA:Trigger rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Phone_Surgical_Team"/>
+        <SoPrA:partOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Inform_Team_On_Surgical"/>
+        <SoPrA:strategy rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Surgical"/>
+        <SoPrA:trigger rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Phone_Surgical_Team"/>
     </owl:NamedIndividual>
     
 
@@ -862,8 +861,8 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#OHN_Medical">
         <rdf:type rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Personal"/>
-        <SoPrA:IsPartOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Medical"/>
-        <SoPrA:Strategy rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Assign_To_Team"/>
+        <SoPrA:partOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Medical"/>
+        <SoPrA:strategy rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Assign_To_Team"/>
     </owl:NamedIndividual>
     
 
@@ -880,8 +879,8 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#OHN_Surgical">
         <rdf:type rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Personal"/>
-        <SoPrA:IsPartOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Surgical"/>
-        <SoPrA:Strategy rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Assign_To_Team"/>
+        <SoPrA:partOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Surgical"/>
+        <SoPrA:strategy rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Assign_To_Team"/>
     </owl:NamedIndividual>
     
 
@@ -891,18 +890,18 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Patient">
         <rdf:type rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Agent"/>
         <SoPrA:adheredValue rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Health"/>
-        <SoPrA:beliefs rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Patient_Acute_Treatment"/>
-        <SoPrA:beliefs rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Patient_Contact_ER"/>
-        <SoPrA:beliefs rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Patient_Inform_Patient_On_Damage"/>
-        <SoPrA:beliefs rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Patient_Inform_Patient_On_Medical"/>
-        <SoPrA:beliefs rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Patient_Inform_Patient_On_Surgical"/>
-        <SoPrA:beliefs rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Patient_Take_Patient"/>
-        <SoPrA:knows rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Acute_Treatment"/>
-        <SoPrA:knows rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Contact_ER"/>
-        <SoPrA:knows rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Inform_Patient_On_Damage"/>
-        <SoPrA:knows rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Inform_Patient_On_Medical"/>
-        <SoPrA:knows rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Inform_Patient_On_Surgical"/>
-        <SoPrA:knows rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Take_Patient"/>
+        <SoPrA:belief rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Patient_Acute_Treatment"/>
+        <SoPrA:belief rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Patient_Contact_ER"/>
+        <SoPrA:belief rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Patient_Inform_Patient_On_Damage"/>
+        <SoPrA:belief rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Patient_Inform_Patient_On_Medical"/>
+        <SoPrA:belief rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Patient_Inform_Patient_On_Surgical"/>
+        <SoPrA:belief rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Patient_Take_Patient"/>
+        <SoPrA:knowledge rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Acute_Treatment"/>
+        <SoPrA:knowledge rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Contact_ER"/>
+        <SoPrA:knowledge rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Inform_Patient_On_Damage"/>
+        <SoPrA:knowledge rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Inform_Patient_On_Medical"/>
+        <SoPrA:knowledge rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Inform_Patient_On_Surgical"/>
+        <SoPrA:knowledge rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Take_Patient"/>
     </owl:NamedIndividual>
     
 
@@ -911,9 +910,9 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Patient_Acute_Treatment">
         <rdf:type rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Personal"/>
-        <SoPrA:IsPartOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Acute_Treatment"/>
         <SoPrA:PromotedValue rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Health"/>
-        <SoPrA:Trigger rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#ER"/>
+        <SoPrA:partOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Acute_Treatment"/>
+        <SoPrA:trigger rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#ER"/>
     </owl:NamedIndividual>
     
 
@@ -922,10 +921,10 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Patient_Contact_ER">
         <rdf:type rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Personal"/>
-        <SoPrA:IsPartOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Contact_ER"/>
         <SoPrA:PromotedValue rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Health"/>
-        <SoPrA:Strategy rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Acute_Treatment"/>
-        <SoPrA:Trigger rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#ER"/>
+        <SoPrA:partOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Contact_ER"/>
+        <SoPrA:strategy rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Acute_Treatment"/>
+        <SoPrA:trigger rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#ER"/>
     </owl:NamedIndividual>
     
 
@@ -934,7 +933,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Patient_Inform_Patient_On_Damage">
         <rdf:type rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Personal"/>
-        <SoPrA:IsPartOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Inform_Patient_On_Damage"/>
+        <SoPrA:partOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Inform_Patient_On_Damage"/>
     </owl:NamedIndividual>
     
 
@@ -943,7 +942,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Patient_Inform_Patient_On_Medical">
         <rdf:type rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Personal"/>
-        <SoPrA:IsPartOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Inform_Patient_On_Medical"/>
+        <SoPrA:partOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Inform_Patient_On_Medical"/>
     </owl:NamedIndividual>
     
 
@@ -952,7 +951,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Patient_Inform_Patient_On_Surgical">
         <rdf:type rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Personal"/>
-        <SoPrA:IsPartOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Inform_Patient_On_Surgical"/>
+        <SoPrA:partOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Inform_Patient_On_Surgical"/>
     </owl:NamedIndividual>
     
 
@@ -961,7 +960,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Patient_Take_Patient">
         <rdf:type rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Personal"/>
-        <SoPrA:IsPartOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Take_Patient"/>
+        <SoPrA:partOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Take_Patient"/>
     </owl:NamedIndividual>
     
 
@@ -978,7 +977,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Personal1_Diagnoses">
         <rdf:type rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Personal"/>
-        <SoPrA:IsPartOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Diagnoses"/>
+        <SoPrA:partOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Diagnoses"/>
     </owl:NamedIndividual>
     
 
@@ -987,7 +986,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Personal1_Perform_Tests">
         <rdf:type rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Personal"/>
-        <SoPrA:IsPartOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Perform_Tests"/>
+        <SoPrA:partOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Perform_Tests"/>
     </owl:NamedIndividual>
     
 
@@ -996,7 +995,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Personal1_Plan">
         <rdf:type rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Personal"/>
-        <SoPrA:IsPartOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Plan"/>
+        <SoPrA:partOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Plan"/>
     </owl:NamedIndividual>
     
 
@@ -1053,8 +1052,8 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Shared_Acute_Treatment">
         <rdf:type rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Shared"/>
-        <SoPrA:IsPartOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Acute_Treatment"/>
         <SoPrA:affordance rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#ER"/>
+        <SoPrA:partOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Acute_Treatment"/>
     </owl:NamedIndividual>
     
 
@@ -1063,8 +1062,8 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Shared_Assign_Nurse">
         <rdf:type rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Shared"/>
-        <SoPrA:IsPartOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Assign_Nurse"/>
         <SoPrA:implementsPartOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Triage"/>
+        <SoPrA:partOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Assign_Nurse"/>
     </owl:NamedIndividual>
     
 
@@ -1073,8 +1072,8 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Shared_Assign_To_Team">
         <rdf:type rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Shared"/>
-        <SoPrA:IsPartOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Assign_To_Team"/>
         <SoPrA:implementsPartOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Acute_Treatment"/>
+        <SoPrA:partOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Assign_To_Team"/>
     </owl:NamedIndividual>
     
 
@@ -1083,11 +1082,11 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Shared_Contact_ER">
         <rdf:type rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Shared"/>
-        <SoPrA:IsPartOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Contact_ER"/>
-        <SoPrA:RequiredCompetence rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#RegisterPatient"/>
-        <SoPrA:RequiredCompetence rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Walk"/>
         <SoPrA:affordance rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#ER"/>
         <SoPrA:implementsPartOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Acute_Treatment"/>
+        <SoPrA:partOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Contact_ER"/>
+        <SoPrA:requiredCompetence rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#RegisterPatient"/>
+        <SoPrA:requiredCompetence rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Walk"/>
     </owl:NamedIndividual>
     
 
@@ -1096,8 +1095,8 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Shared_Damage">
         <rdf:type rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Shared"/>
-        <SoPrA:IsPartOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Damage"/>
         <SoPrA:implementsAllOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Assign_To_Team"/>
+        <SoPrA:partOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Damage"/>
     </owl:NamedIndividual>
     
 
@@ -1106,8 +1105,8 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Shared_Diagnoses">
         <rdf:type rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Shared"/>
-        <SoPrA:IsPartOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Diagnoses"/>
         <SoPrA:implementsPartOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Treatment"/>
+        <SoPrA:partOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Diagnoses"/>
     </owl:NamedIndividual>
     
 
@@ -1116,8 +1115,8 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Shared_Inform_Patient_On_Damage">
         <rdf:type rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Shared"/>
-        <SoPrA:IsPartOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Inform_Patient_On_Damage"/>
         <SoPrA:implementsPartOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Damage"/>
+        <SoPrA:partOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Inform_Patient_On_Damage"/>
     </owl:NamedIndividual>
     
 
@@ -1126,8 +1125,8 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Shared_Inform_Patient_On_Medical">
         <rdf:type rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Shared"/>
-        <SoPrA:IsPartOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Inform_Patient_On_Medical"/>
         <SoPrA:implementsPartOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Medical"/>
+        <SoPrA:partOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Inform_Patient_On_Medical"/>
     </owl:NamedIndividual>
     
 
@@ -1136,8 +1135,8 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Shared_Inform_Patient_On_Surgical">
         <rdf:type rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Shared"/>
-        <SoPrA:IsPartOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Inform_Patient_On_Surgical"/>
         <SoPrA:implementsPartOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Surgical"/>
+        <SoPrA:partOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Inform_Patient_On_Surgical"/>
     </owl:NamedIndividual>
     
 
@@ -1146,10 +1145,10 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Shared_Inform_Team_On_Damage">
         <rdf:type rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Shared"/>
-        <SoPrA:IsPartOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Inform_Team_On_Damage"/>
-        <SoPrA:RequiredCompetence rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#HasDamageTHNContact"/>
         <SoPrA:affordance rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Phone_Damage_Team"/>
         <SoPrA:implementsPartOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Damage"/>
+        <SoPrA:partOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Inform_Team_On_Damage"/>
+        <SoPrA:requiredCompetence rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#HasDamageTHNContact"/>
     </owl:NamedIndividual>
     
 
@@ -1158,10 +1157,10 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Shared_Inform_Team_On_Medical">
         <rdf:type rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Shared"/>
-        <SoPrA:IsPartOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Inform_Team_On_Medical"/>
-        <SoPrA:RequiredCompetence rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#HasMedicalTHNContact"/>
         <SoPrA:affordance rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Phone_Medical_Team"/>
         <SoPrA:implementsPartOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Medical"/>
+        <SoPrA:partOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Inform_Team_On_Medical"/>
+        <SoPrA:requiredCompetence rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#HasMedicalTHNContact"/>
     </owl:NamedIndividual>
     
 
@@ -1170,10 +1169,10 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Shared_Inform_Team_On_Surgical">
         <rdf:type rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Shared"/>
-        <SoPrA:IsPartOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Inform_Team_On_Surgical"/>
-        <SoPrA:RequiredCompetence rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#HasSurgicalTHNContact"/>
         <SoPrA:affordance rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Phone_Surgical_Team"/>
         <SoPrA:implementsPartOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Surgical"/>
+        <SoPrA:partOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Inform_Team_On_Surgical"/>
+        <SoPrA:requiredCompetence rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#HasSurgicalTHNContact"/>
     </owl:NamedIndividual>
     
 
@@ -1182,8 +1181,8 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Shared_Medical">
         <rdf:type rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Shared"/>
-        <SoPrA:IsPartOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Medical"/>
         <SoPrA:implementsAllOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Assign_To_Team"/>
+        <SoPrA:partOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Medical"/>
     </owl:NamedIndividual>
     
 
@@ -1192,8 +1191,8 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Shared_NurseTriage">
         <rdf:type rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Shared"/>
-        <SoPrA:IsPartOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#NurseTriage"/>
         <SoPrA:implementsAllOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Assign_Nurse"/>
+        <SoPrA:partOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#NurseTriage"/>
     </owl:NamedIndividual>
     
 
@@ -1202,8 +1201,8 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Shared_Perform_Tests">
         <rdf:type rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Shared"/>
-        <SoPrA:IsPartOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Perform_Tests"/>
         <SoPrA:implementsPartOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Diagnoses"/>
+        <SoPrA:partOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Perform_Tests"/>
     </owl:NamedIndividual>
     
 
@@ -1212,8 +1211,8 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Shared_Plan">
         <rdf:type rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Shared"/>
-        <SoPrA:IsPartOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Plan"/>
         <SoPrA:implementsPartOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Treatment"/>
+        <SoPrA:partOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Plan"/>
     </owl:NamedIndividual>
     
 
@@ -1222,8 +1221,8 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Shared_Surgical">
         <rdf:type rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Shared"/>
-        <SoPrA:IsPartOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Surgical"/>
         <SoPrA:implementsAllOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Assign_To_Team"/>
+        <SoPrA:partOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Surgical"/>
     </owl:NamedIndividual>
     
 
@@ -1232,8 +1231,8 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Shared_THNTriage">
         <rdf:type rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Shared"/>
-        <SoPrA:IsPartOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#THNTriage"/>
         <SoPrA:implementsAllOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Assign_Nurse"/>
+        <SoPrA:partOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#THNTriage"/>
     </owl:NamedIndividual>
     
 
@@ -1242,8 +1241,8 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Shared_Take_Patient">
         <rdf:type rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Shared"/>
-        <SoPrA:IsPartOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Take_Patient"/>
         <SoPrA:implementsPartOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Triage"/>
+        <SoPrA:partOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Take_Patient"/>
     </owl:NamedIndividual>
     
 
@@ -1252,8 +1251,8 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Shared_Take_Trainee">
         <rdf:type rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Shared"/>
-        <SoPrA:IsPartOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Take_Trainee"/>
         <SoPrA:implementsPartOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Triage"/>
+        <SoPrA:partOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Take_Trainee"/>
     </owl:NamedIndividual>
     
 
@@ -1262,10 +1261,10 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Shared_TraineeTriage">
         <rdf:type rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Shared"/>
-        <SoPrA:IsPartOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#TraineeTriage"/>
-        <SoPrA:RequiredCompetence rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#SocialSkills"/>
-        <SoPrA:RequiredCompetence rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#TriageExperience"/>
         <SoPrA:implementsAllOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Assign_Nurse"/>
+        <SoPrA:partOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#TraineeTriage"/>
+        <SoPrA:requiredCompetence rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#SocialSkills"/>
+        <SoPrA:requiredCompetence rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#TriageExperience"/>
     </owl:NamedIndividual>
     
 
@@ -1274,8 +1273,8 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Shared_Treatment">
         <rdf:type rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Shared"/>
-        <SoPrA:IsPartOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Treatment"/>
         <SoPrA:implementsPartOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Acute_Treatment"/>
+        <SoPrA:partOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Treatment"/>
     </owl:NamedIndividual>
     
 
@@ -1284,8 +1283,8 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Shared_Triage">
         <rdf:type rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Shared"/>
-        <SoPrA:IsPartOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Triage"/>
         <SoPrA:implementsPartOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Treatment"/>
+        <SoPrA:partOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Triage"/>
     </owl:NamedIndividual>
     
 
@@ -1320,22 +1319,22 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Agent"/>
         <SoPrA:adheredValue rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Education"/>
         <SoPrA:adheredValue rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Professional"/>
-        <SoPrA:beliefs rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#THN_D_Assign_Nurse"/>
-        <SoPrA:beliefs rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#THN_D_NurseTriage"/>
-        <SoPrA:beliefs rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#THN_D_THNTriage"/>
-        <SoPrA:beliefs rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#THN_D_Take_Patient"/>
-        <SoPrA:beliefs rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#THN_D_Take_Trainee"/>
-        <SoPrA:beliefs rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#THN_D_TraineeTriage"/>
-        <SoPrA:beliefs rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#THN_D_Treatment"/>
-        <SoPrA:beliefs rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#THN_D_Triage"/>
-        <SoPrA:beliefs rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#THN_Inform_Team_On_Damage"/>
-        <SoPrA:knows rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Inform_Team_On_Damage"/>
-        <SoPrA:knows rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#NurseTriage"/>
-        <SoPrA:knows rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#THNTriage"/>
-        <SoPrA:knows rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Take_Trainee"/>
-        <SoPrA:knows rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#TraineeTriage"/>
-        <SoPrA:knows rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Treatment"/>
-        <SoPrA:knows rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Triage"/>
+        <SoPrA:belief rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#THN_D_Assign_Nurse"/>
+        <SoPrA:belief rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#THN_D_NurseTriage"/>
+        <SoPrA:belief rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#THN_D_THNTriage"/>
+        <SoPrA:belief rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#THN_D_Take_Patient"/>
+        <SoPrA:belief rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#THN_D_Take_Trainee"/>
+        <SoPrA:belief rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#THN_D_TraineeTriage"/>
+        <SoPrA:belief rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#THN_D_Treatment"/>
+        <SoPrA:belief rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#THN_D_Triage"/>
+        <SoPrA:belief rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#THN_Inform_Team_On_Damage"/>
+        <SoPrA:knowledge rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Inform_Team_On_Damage"/>
+        <SoPrA:knowledge rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#NurseTriage"/>
+        <SoPrA:knowledge rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#THNTriage"/>
+        <SoPrA:knowledge rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Take_Trainee"/>
+        <SoPrA:knowledge rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#TraineeTriage"/>
+        <SoPrA:knowledge rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Treatment"/>
+        <SoPrA:knowledge rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Triage"/>
     </owl:NamedIndividual>
     
 
@@ -1344,7 +1343,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#THN_D_Assign_Nurse">
         <rdf:type rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Personal"/>
-        <SoPrA:IsPartOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Assign_Nurse"/>
+        <SoPrA:partOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Assign_Nurse"/>
     </owl:NamedIndividual>
     
 
@@ -1353,8 +1352,8 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#THN_D_NurseTriage">
         <rdf:type rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Personal"/>
-        <SoPrA:IsPartOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#NurseTriage"/>
         <SoPrA:PromotedValue rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Professional"/>
+        <SoPrA:partOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#NurseTriage"/>
     </owl:NamedIndividual>
     
 
@@ -1364,7 +1363,7 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#THN_D_THNTriage">
         <rdf:type rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Personal"/>
         <SoPrA:DemotedValue rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Professional"/>
-        <SoPrA:IsPartOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#THNTriage"/>
+        <SoPrA:partOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#THNTriage"/>
     </owl:NamedIndividual>
     
 
@@ -1373,7 +1372,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#THN_D_Take_Patient">
         <rdf:type rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Personal"/>
-        <SoPrA:IsPartOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Take_Patient"/>
+        <SoPrA:partOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Take_Patient"/>
     </owl:NamedIndividual>
     
 
@@ -1382,8 +1381,8 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#THN_D_Take_Trainee">
         <rdf:type rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Personal"/>
-        <SoPrA:IsPartOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Take_Trainee"/>
         <SoPrA:PromotedValue rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Education"/>
+        <SoPrA:partOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Take_Trainee"/>
     </owl:NamedIndividual>
     
 
@@ -1392,8 +1391,8 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#THN_D_TraineeTriage">
         <rdf:type rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Personal"/>
-        <SoPrA:IsPartOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#TraineeTriage"/>
         <SoPrA:PromotedValue rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Education"/>
+        <SoPrA:partOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#TraineeTriage"/>
     </owl:NamedIndividual>
     
 
@@ -1402,7 +1401,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#THN_D_Treatment">
         <rdf:type rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Personal"/>
-        <SoPrA:IsPartOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Treatment"/>
+        <SoPrA:partOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Treatment"/>
     </owl:NamedIndividual>
     
 
@@ -1411,7 +1410,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#THN_D_Triage">
         <rdf:type rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Personal"/>
-        <SoPrA:IsPartOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Triage"/>
+        <SoPrA:partOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Triage"/>
     </owl:NamedIndividual>
     
 
@@ -1420,9 +1419,9 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#THN_Inform_Team_On_Damage">
         <rdf:type rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Personal"/>
-        <SoPrA:IsPartOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Inform_Team_On_Damage"/>
         <SoPrA:PromotedValue rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Professional"/>
-        <SoPrA:Trigger rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Phone_Damage_Team"/>
+        <SoPrA:partOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Inform_Team_On_Damage"/>
+        <SoPrA:trigger rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Phone_Damage_Team"/>
     </owl:NamedIndividual>
     
 
@@ -1431,9 +1430,9 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#THN_Inform_Team_On_Medical">
         <rdf:type rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Personal"/>
-        <SoPrA:IsPartOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Inform_Team_On_Medical"/>
         <SoPrA:PromotedValue rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Professional"/>
-        <SoPrA:Trigger rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Phone_Medical_Team"/>
+        <SoPrA:partOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Inform_Team_On_Medical"/>
+        <SoPrA:trigger rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Phone_Medical_Team"/>
     </owl:NamedIndividual>
     
 
@@ -1442,9 +1441,9 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#THN_Inform_Team_On_Surgical">
         <rdf:type rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Personal"/>
-        <SoPrA:IsPartOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Inform_Team_On_Surgical"/>
         <SoPrA:PromotedValue rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Professional"/>
-        <SoPrA:Trigger rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Phone_Surgical_Team"/>
+        <SoPrA:partOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Inform_Team_On_Surgical"/>
+        <SoPrA:trigger rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Phone_Surgical_Team"/>
     </owl:NamedIndividual>
     
 
@@ -1455,22 +1454,22 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Agent"/>
         <SoPrA:adheredValue rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Education"/>
         <SoPrA:adheredValue rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Professional"/>
-        <SoPrA:beliefs rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#THN_Inform_Team_On_Medical"/>
-        <SoPrA:beliefs rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#THN_M_Assign_Nurse"/>
-        <SoPrA:beliefs rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#THN_M_NurseTriage"/>
-        <SoPrA:beliefs rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#THN_M_THNTriage"/>
-        <SoPrA:beliefs rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#THN_M_Take_Patient"/>
-        <SoPrA:beliefs rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#THN_M_Take_Trainee"/>
-        <SoPrA:beliefs rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#THN_M_TraineeTriage"/>
-        <SoPrA:beliefs rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#THN_M_Treatment"/>
-        <SoPrA:beliefs rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#THN_M_Triage"/>
-        <SoPrA:knows rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Inform_Team_On_Medical"/>
-        <SoPrA:knows rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#NurseTriage"/>
-        <SoPrA:knows rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#THNTriage"/>
-        <SoPrA:knows rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Take_Trainee"/>
-        <SoPrA:knows rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#TraineeTriage"/>
-        <SoPrA:knows rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Treatment"/>
-        <SoPrA:knows rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Triage"/>
+        <SoPrA:belief rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#THN_Inform_Team_On_Medical"/>
+        <SoPrA:belief rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#THN_M_Assign_Nurse"/>
+        <SoPrA:belief rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#THN_M_NurseTriage"/>
+        <SoPrA:belief rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#THN_M_THNTriage"/>
+        <SoPrA:belief rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#THN_M_Take_Patient"/>
+        <SoPrA:belief rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#THN_M_Take_Trainee"/>
+        <SoPrA:belief rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#THN_M_TraineeTriage"/>
+        <SoPrA:belief rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#THN_M_Treatment"/>
+        <SoPrA:belief rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#THN_M_Triage"/>
+        <SoPrA:knowledge rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Inform_Team_On_Medical"/>
+        <SoPrA:knowledge rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#NurseTriage"/>
+        <SoPrA:knowledge rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#THNTriage"/>
+        <SoPrA:knowledge rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Take_Trainee"/>
+        <SoPrA:knowledge rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#TraineeTriage"/>
+        <SoPrA:knowledge rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Treatment"/>
+        <SoPrA:knowledge rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Triage"/>
     </owl:NamedIndividual>
     
 
@@ -1479,7 +1478,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#THN_M_Assign_Nurse">
         <rdf:type rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Personal"/>
-        <SoPrA:IsPartOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Assign_Nurse"/>
+        <SoPrA:partOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Assign_Nurse"/>
     </owl:NamedIndividual>
     
 
@@ -1488,8 +1487,8 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#THN_M_NurseTriage">
         <rdf:type rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Personal"/>
-        <SoPrA:IsPartOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#NurseTriage"/>
         <SoPrA:PromotedValue rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Professional"/>
+        <SoPrA:partOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#NurseTriage"/>
     </owl:NamedIndividual>
     
 
@@ -1499,7 +1498,7 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#THN_M_THNTriage">
         <rdf:type rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Personal"/>
         <SoPrA:DemotedValue rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Professional"/>
-        <SoPrA:IsPartOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#THNTriage"/>
+        <SoPrA:partOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#THNTriage"/>
     </owl:NamedIndividual>
     
 
@@ -1508,7 +1507,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#THN_M_Take_Patient">
         <rdf:type rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Personal"/>
-        <SoPrA:IsPartOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Take_Patient"/>
+        <SoPrA:partOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Take_Patient"/>
     </owl:NamedIndividual>
     
 
@@ -1517,8 +1516,8 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#THN_M_Take_Trainee">
         <rdf:type rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Personal"/>
-        <SoPrA:IsPartOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Take_Trainee"/>
         <SoPrA:PromotedValue rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Education"/>
+        <SoPrA:partOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Take_Trainee"/>
     </owl:NamedIndividual>
     
 
@@ -1527,8 +1526,8 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#THN_M_TraineeTriage">
         <rdf:type rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Personal"/>
-        <SoPrA:IsPartOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#TraineeTriage"/>
         <SoPrA:PromotedValue rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Education"/>
+        <SoPrA:partOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#TraineeTriage"/>
     </owl:NamedIndividual>
     
 
@@ -1537,7 +1536,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#THN_M_Treatment">
         <rdf:type rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Personal"/>
-        <SoPrA:IsPartOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Treatment"/>
+        <SoPrA:partOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Treatment"/>
     </owl:NamedIndividual>
     
 
@@ -1546,7 +1545,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#THN_M_Triage">
         <rdf:type rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Personal"/>
-        <SoPrA:IsPartOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Triage"/>
+        <SoPrA:partOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Triage"/>
     </owl:NamedIndividual>
     
 
@@ -1557,22 +1556,22 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Agent"/>
         <SoPrA:adheredValue rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Education"/>
         <SoPrA:adheredValue rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Professional"/>
-        <SoPrA:beliefs rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#THN_Inform_Team_On_Surgical"/>
-        <SoPrA:beliefs rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#THN_S_Assign_Nurse"/>
-        <SoPrA:beliefs rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#THN_S_NurseTriage"/>
-        <SoPrA:beliefs rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#THN_S_THNTriage"/>
-        <SoPrA:beliefs rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#THN_S_Take_Patient"/>
-        <SoPrA:beliefs rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#THN_S_Take_Trainee"/>
-        <SoPrA:beliefs rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#THN_S_TraineeTriage"/>
-        <SoPrA:beliefs rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#THN_S_Treatment"/>
-        <SoPrA:beliefs rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#THN_S_Triage"/>
-        <SoPrA:knows rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Inform_Team_On_Surgical"/>
-        <SoPrA:knows rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#NurseTriage"/>
-        <SoPrA:knows rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#THNTriage"/>
-        <SoPrA:knows rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Take_Patient"/>
-        <SoPrA:knows rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Take_Trainee"/>
-        <SoPrA:knows rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#TraineeTriage"/>
-        <SoPrA:knows rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Treatment"/>
+        <SoPrA:belief rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#THN_Inform_Team_On_Surgical"/>
+        <SoPrA:belief rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#THN_S_Assign_Nurse"/>
+        <SoPrA:belief rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#THN_S_NurseTriage"/>
+        <SoPrA:belief rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#THN_S_THNTriage"/>
+        <SoPrA:belief rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#THN_S_Take_Patient"/>
+        <SoPrA:belief rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#THN_S_Take_Trainee"/>
+        <SoPrA:belief rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#THN_S_TraineeTriage"/>
+        <SoPrA:belief rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#THN_S_Treatment"/>
+        <SoPrA:belief rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#THN_S_Triage"/>
+        <SoPrA:knowledge rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Inform_Team_On_Surgical"/>
+        <SoPrA:knowledge rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#NurseTriage"/>
+        <SoPrA:knowledge rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#THNTriage"/>
+        <SoPrA:knowledge rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Take_Patient"/>
+        <SoPrA:knowledge rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Take_Trainee"/>
+        <SoPrA:knowledge rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#TraineeTriage"/>
+        <SoPrA:knowledge rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Treatment"/>
     </owl:NamedIndividual>
     
 
@@ -1581,7 +1580,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#THN_S_Assign_Nurse">
         <rdf:type rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Personal"/>
-        <SoPrA:IsPartOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Assign_Nurse"/>
+        <SoPrA:partOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Assign_Nurse"/>
     </owl:NamedIndividual>
     
 
@@ -1590,8 +1589,8 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#THN_S_NurseTriage">
         <rdf:type rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Personal"/>
-        <SoPrA:IsPartOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#NurseTriage"/>
         <SoPrA:PromotedValue rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Professional"/>
+        <SoPrA:partOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#NurseTriage"/>
     </owl:NamedIndividual>
     
 
@@ -1601,7 +1600,7 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#THN_S_THNTriage">
         <rdf:type rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Personal"/>
         <SoPrA:DemotedValue rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Professional"/>
-        <SoPrA:IsPartOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#THNTriage"/>
+        <SoPrA:partOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#THNTriage"/>
     </owl:NamedIndividual>
     
 
@@ -1610,7 +1609,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#THN_S_Take_Patient">
         <rdf:type rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Personal"/>
-        <SoPrA:IsPartOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Take_Patient"/>
+        <SoPrA:partOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Take_Patient"/>
     </owl:NamedIndividual>
     
 
@@ -1619,8 +1618,8 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#THN_S_Take_Trainee">
         <rdf:type rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Personal"/>
-        <SoPrA:IsPartOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Take_Trainee"/>
         <SoPrA:PromotedValue rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Education"/>
+        <SoPrA:partOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Take_Trainee"/>
     </owl:NamedIndividual>
     
 
@@ -1629,8 +1628,8 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#THN_S_TraineeTriage">
         <rdf:type rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Personal"/>
-        <SoPrA:IsPartOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#TraineeTriage"/>
         <SoPrA:PromotedValue rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Education"/>
+        <SoPrA:partOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#TraineeTriage"/>
     </owl:NamedIndividual>
     
 
@@ -1639,7 +1638,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#THN_S_Treatment">
         <rdf:type rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Personal"/>
-        <SoPrA:IsPartOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Treatment"/>
+        <SoPrA:partOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Treatment"/>
     </owl:NamedIndividual>
     
 
@@ -1648,7 +1647,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#THN_S_Triage">
         <rdf:type rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Personal"/>
-        <SoPrA:IsPartOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Triage"/>
+        <SoPrA:partOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Triage"/>
     </owl:NamedIndividual>
     
 
@@ -1681,8 +1680,8 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Trainee_E_Take_Trainee">
         <rdf:type rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Personal"/>
-        <SoPrA:IsPartOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Take_Trainee"/>
         <SoPrA:PromotedValue rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Education"/>
+        <SoPrA:partOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Take_Trainee"/>
     </owl:NamedIndividual>
     
 
@@ -1691,8 +1690,8 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Trainee_E_TrineeTriage">
         <rdf:type rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Personal"/>
-        <SoPrA:IsPartOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#TraineeTriage"/>
         <SoPrA:PromotedValue rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Education"/>
+        <SoPrA:partOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#TraineeTriage"/>
     </owl:NamedIndividual>
     
 
@@ -1702,11 +1701,11 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Trainee_Experienced">
         <rdf:type rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Agent"/>
         <SoPrA:adheredValue rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Education"/>
-        <SoPrA:beliefs rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Trainee_E_Take_Trainee"/>
-        <SoPrA:beliefs rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Trainee_E_TrineeTriage"/>
-        <SoPrA:beliefs rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Trainee_Take_Patient"/>
-        <SoPrA:knows rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Take_Trainee"/>
-        <SoPrA:knows rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#TraineeTriage"/>
+        <SoPrA:belief rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Trainee_E_Take_Trainee"/>
+        <SoPrA:belief rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Trainee_E_TrineeTriage"/>
+        <SoPrA:belief rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Trainee_Take_Patient"/>
+        <SoPrA:knowledge rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Take_Trainee"/>
+        <SoPrA:knowledge rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#TraineeTriage"/>
         <SoPrA:ownedCompetence rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#SocialSkills"/>
         <SoPrA:ownedCompetence rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#TriageExperience"/>
     </owl:NamedIndividual>
@@ -1717,8 +1716,8 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Trainee_N_Take_Trainee">
         <rdf:type rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Personal"/>
-        <SoPrA:IsPartOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Take_Trainee"/>
         <SoPrA:PromotedValue rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Education"/>
+        <SoPrA:partOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Take_Trainee"/>
     </owl:NamedIndividual>
     
 
@@ -1727,8 +1726,8 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Trainee_N_TraineeTriage">
         <rdf:type rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Personal"/>
-        <SoPrA:IsPartOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#TraineeTriage"/>
         <SoPrA:PromotedValue rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Education"/>
+        <SoPrA:partOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#TraineeTriage"/>
     </owl:NamedIndividual>
     
 
@@ -1738,9 +1737,9 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Trainee_New">
         <rdf:type rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Agent"/>
         <SoPrA:adheredValue rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Education"/>
-        <SoPrA:beliefs rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Trainee_N_Take_Trainee"/>
-        <SoPrA:knows rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Take_Trainee"/>
-        <SoPrA:knows rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#TraineeTriage"/>
+        <SoPrA:belief rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Trainee_N_Take_Trainee"/>
+        <SoPrA:knowledge rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Take_Trainee"/>
+        <SoPrA:knowledge rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#TraineeTriage"/>
     </owl:NamedIndividual>
     
 
@@ -1749,7 +1748,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Trainee_Take_Patient">
         <rdf:type rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Personal"/>
-        <SoPrA:IsPartOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Take_Patient"/>
+        <SoPrA:partOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Take_Patient"/>
     </owl:NamedIndividual>
     
 
@@ -1808,20 +1807,20 @@
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointProperties"/>
         <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#IsPartOf"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#RelatedValue"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#RequiredCompetence"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Strategy"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Trigger"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#adheredValue"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#affordance"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#beliefs"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#belief"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#hasPart"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#implementationOf"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#implementedBy"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#implements"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#knows"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#knowledge"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#ownedCompetence"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#partOf"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#recruited"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#relatedValue"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#requiredCompetence"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#strategy"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#trigger"/>
         </owl:members>
     </rdf:Description>
     
@@ -1835,22 +1834,22 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    <rdf:Description rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/untitled-ontology-5#ag">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/untitled-ontology-5#pp">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
     <rdf:Description rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/untitled-ontology-5#p">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/untitled-ontology-5#pc">
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/untitled-ontology-5#c">
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/untitled-ontology-5#sc">
-        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/untitled-ontology-5#pp">
-        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/untitled-ontology-5#ag">
-        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/untitled-ontology-5#pc">
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/untitled-ontology-5#val">
@@ -1865,25 +1864,25 @@
     <rdf:Description rdf:about="urn:swrl#s">
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
     </rdf:Description>
-    <rdf:Description rdf:about="urn:swrl#a">
+    <rdf:Description rdf:about="urn:swrl#aa">
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
     </rdf:Description>
-    <rdf:Description rdf:about="urn:swrl#aa">
+    <rdf:Description rdf:about="urn:swrl#a">
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
     </rdf:Description>
     <rdf:Description rdf:about="urn:swrl#sa">
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
     </rdf:Description>
-    <rdf:Description rdf:about="urn:swrl#p">
+    <rdf:Description rdf:about="urn:swrl#c">
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
     </rdf:Description>
-    <rdf:Description rdf:about="urn:swrl#c">
+    <rdf:Description rdf:about="urn:swrl#sc">
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
     </rdf:Description>
     <rdf:Description rdf:about="urn:swrl#pc">
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
     </rdf:Description>
-    <rdf:Description rdf:about="urn:swrl#sc">
+    <rdf:Description rdf:about="urn:swrl#p">
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
     </rdf:Description>
     <rdf:Description rdf:about="urn:swrl#sp">
@@ -1892,10 +1891,10 @@
     <rdf:Description rdf:about="urn:swrl#com">
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
     </rdf:Description>
-    <rdf:Description rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/untitled-ontology-5#a">
+    <rdf:Description rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/untitled-ontology-5#p1">
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
     </rdf:Description>
-    <rdf:Description rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/untitled-ontology-5#p1">
+    <rdf:Description rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/untitled-ontology-5#a">
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/untitled-ontology-5#p2">
@@ -1914,9 +1913,10 @@
                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
                 <rdf:first>
                     <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Shared"/>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#implementationOf"/>
                         <swrl:argument1 rdf:resource="urn:swrl#s"/>
+                        <swrl:argument2 rdf:resource="urn:swrl#aa"/>
                     </rdf:Description>
                 </rdf:first>
                 <rdf:rest>
@@ -1924,9 +1924,10 @@
                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
                         <rdf:first>
                             <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Activity"/>
-                                <swrl:argument1 rdf:resource="urn:swrl#a"/>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#partOf"/>
+                                <swrl:argument1 rdf:resource="urn:swrl#s"/>
+                                <swrl:argument2 rdf:resource="urn:swrl#a"/>
                             </rdf:Description>
                         </rdf:first>
                         <rdf:rest>
@@ -1935,9 +1936,9 @@
                                 <rdf:first>
                                     <rdf:Description>
                                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#IsPartOf"/>
-                                        <swrl:argument1 rdf:resource="urn:swrl#s"/>
-                                        <swrl:argument2 rdf:resource="urn:swrl#a"/>
+                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#partOf"/>
+                                        <swrl:argument1 rdf:resource="urn:swrl#sa"/>
+                                        <swrl:argument2 rdf:resource="urn:swrl#aa"/>
                                     </rdf:Description>
                                 </rdf:first>
                                 <rdf:rest>
@@ -1945,10 +1946,9 @@
                                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
                                         <rdf:first>
                                             <rdf:Description>
-                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#implements"/>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Shared"/>
                                                 <swrl:argument1 rdf:resource="urn:swrl#s"/>
-                                                <swrl:argument2 rdf:resource="urn:swrl#aa"/>
                                             </rdf:Description>
                                         </rdf:first>
                                         <rdf:rest>
@@ -1957,7 +1957,12 @@
                                                 <rdf:first>
                                                     <rdf:Description>
                                                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                                                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Shared"/>
+                                                        <swrl:classPredicate>
+                                                            <owl:Restriction>
+                                                                <owl:onProperty rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#implementationOf"/>
+                                                                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+                                                            </owl:Restriction>
+                                                        </swrl:classPredicate>
                                                         <swrl:argument1 rdf:resource="urn:swrl#sa"/>
                                                     </rdf:Description>
                                                 </rdf:first>
@@ -1966,10 +1971,9 @@
                                                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
                                                         <rdf:first>
                                                             <rdf:Description>
-                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#IsPartOf"/>
-                                                                <swrl:argument1 rdf:resource="urn:swrl#sa"/>
-                                                                <swrl:argument2 rdf:resource="urn:swrl#aa"/>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Activity"/>
+                                                                <swrl:argument1 rdf:resource="urn:swrl#a"/>
                                                             </rdf:Description>
                                                         </rdf:first>
                                                         <rdf:rest>
@@ -1978,12 +1982,7 @@
                                                                 <rdf:first>
                                                                     <rdf:Description>
                                                                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                                                                        <swrl:classPredicate>
-                                                                            <owl:Restriction>
-                                                                                <owl:onProperty rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#implements"/>
-                                                                                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-                                                                            </owl:Restriction>
-                                                                        </swrl:classPredicate>
+                                                                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Shared"/>
                                                                         <swrl:argument1 rdf:resource="urn:swrl#sa"/>
                                                                     </rdf:Description>
                                                                 </rdf:first>
@@ -2087,7 +2086,7 @@
                     <rdf:Description>
                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
                         <swrl:classPredicate rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Activity"/>
-                        <swrl:argument1 rdf:resource="urn:swrl#p"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#c"/>
                     </rdf:Description>
                 </rdf:first>
                 <rdf:rest>
@@ -2095,9 +2094,10 @@
                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
                         <rdf:first>
                             <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Activity"/>
-                                <swrl:argument1 rdf:resource="urn:swrl#c"/>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#partOf"/>
+                                <swrl:argument1 rdf:resource="urn:swrl#sc"/>
+                                <swrl:argument2 rdf:resource="urn:swrl#c"/>
                             </rdf:Description>
                         </rdf:first>
                         <rdf:rest>
@@ -2105,9 +2105,10 @@
                                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
                                 <rdf:first>
                                     <rdf:Description>
-                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Personal"/>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#partOf"/>
                                         <swrl:argument1 rdf:resource="urn:swrl#pc"/>
+                                        <swrl:argument2 rdf:resource="urn:swrl#c"/>
                                     </rdf:Description>
                                 </rdf:first>
                                 <rdf:rest>
@@ -2116,9 +2117,9 @@
                                         <rdf:first>
                                             <rdf:Description>
                                                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#IsPartOf"/>
+                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#strategy"/>
                                                 <swrl:argument1 rdf:resource="urn:swrl#pc"/>
-                                                <swrl:argument2 rdf:resource="urn:swrl#c"/>
+                                                <swrl:argument2 rdf:resource="urn:swrl#p"/>
                                             </rdf:Description>
                                         </rdf:first>
                                         <rdf:rest>
@@ -2136,10 +2137,9 @@
                                                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
                                                         <rdf:first>
                                                             <rdf:Description>
-                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#IsPartOf"/>
-                                                                <swrl:argument1 rdf:resource="urn:swrl#sc"/>
-                                                                <swrl:argument2 rdf:resource="urn:swrl#c"/>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Activity"/>
+                                                                <swrl:argument1 rdf:resource="urn:swrl#p"/>
                                                             </rdf:Description>
                                                         </rdf:first>
                                                         <rdf:rest>
@@ -2147,10 +2147,9 @@
                                                                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
                                                                 <rdf:first>
                                                                     <rdf:Description>
-                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Strategy"/>
+                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Personal"/>
                                                                         <swrl:argument1 rdf:resource="urn:swrl#pc"/>
-                                                                        <swrl:argument2 rdf:resource="urn:swrl#p"/>
                                                                     </rdf:Description>
                                                                 </rdf:first>
                                                                 <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
@@ -2174,7 +2173,7 @@
                 <rdf:first>
                     <rdf:Description>
                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#implements"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#implementationOf"/>
                         <swrl:argument1 rdf:resource="urn:swrl#sc"/>
                         <swrl:argument2 rdf:resource="urn:swrl#p"/>
                     </rdf:Description>
@@ -2193,7 +2192,7 @@
                     <rdf:Description>
                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
                         <swrl:classPredicate rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Activity"/>
-                        <swrl:argument1 rdf:resource="urn:swrl#p"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#c"/>
                     </rdf:Description>
                 </rdf:first>
                 <rdf:rest>
@@ -2201,9 +2200,10 @@
                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
                         <rdf:first>
                             <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Activity"/>
-                                <swrl:argument1 rdf:resource="urn:swrl#c"/>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#partOf"/>
+                                <swrl:argument1 rdf:resource="urn:swrl#sp"/>
+                                <swrl:argument2 rdf:resource="urn:swrl#p"/>
                             </rdf:Description>
                         </rdf:first>
                         <rdf:rest>
@@ -2211,9 +2211,10 @@
                                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
                                 <rdf:first>
                                     <rdf:Description>
-                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Shared"/>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#partOf"/>
                                         <swrl:argument1 rdf:resource="urn:swrl#sc"/>
+                                        <swrl:argument2 rdf:resource="urn:swrl#c"/>
                                     </rdf:Description>
                                 </rdf:first>
                                 <rdf:rest>
@@ -2222,9 +2223,9 @@
                                         <rdf:first>
                                             <rdf:Description>
                                                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#IsPartOf"/>
-                                                <swrl:argument1 rdf:resource="urn:swrl#sc"/>
-                                                <swrl:argument2 rdf:resource="urn:swrl#c"/>
+                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#requiredCompetence"/>
+                                                <swrl:argument1 rdf:resource="urn:swrl#sp"/>
+                                                <swrl:argument2 rdf:resource="urn:swrl#com"/>
                                             </rdf:Description>
                                         </rdf:first>
                                         <rdf:rest>
@@ -2233,7 +2234,7 @@
                                                 <rdf:first>
                                                     <rdf:Description>
                                                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#implements"/>
+                                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#implementationOf"/>
                                                         <swrl:argument1 rdf:resource="urn:swrl#sc"/>
                                                         <swrl:argument2 rdf:resource="urn:swrl#p"/>
                                                     </rdf:Description>
@@ -2245,7 +2246,7 @@
                                                             <rdf:Description>
                                                                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
                                                                 <swrl:classPredicate rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Shared"/>
-                                                                <swrl:argument1 rdf:resource="urn:swrl#sp"/>
+                                                                <swrl:argument1 rdf:resource="urn:swrl#sc"/>
                                                             </rdf:Description>
                                                         </rdf:first>
                                                         <rdf:rest>
@@ -2253,10 +2254,9 @@
                                                                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
                                                                 <rdf:first>
                                                                     <rdf:Description>
-                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#IsPartOf"/>
-                                                                        <swrl:argument1 rdf:resource="urn:swrl#sp"/>
-                                                                        <swrl:argument2 rdf:resource="urn:swrl#p"/>
+                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Activity"/>
+                                                                        <swrl:argument1 rdf:resource="urn:swrl#p"/>
                                                                     </rdf:Description>
                                                                 </rdf:first>
                                                                 <rdf:rest>
@@ -2264,10 +2264,9 @@
                                                                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
                                                                         <rdf:first>
                                                                             <rdf:Description>
-                                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#RequiredCompetence"/>
+                                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Shared"/>
                                                                                 <swrl:argument1 rdf:resource="urn:swrl#sp"/>
-                                                                                <swrl:argument2 rdf:resource="urn:swrl#com"/>
                                                                             </rdf:Description>
                                                                         </rdf:first>
                                                                         <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
@@ -2293,7 +2292,7 @@
                 <rdf:first>
                     <rdf:Description>
                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#RequiredCompetence"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#requiredCompetence"/>
                         <swrl:argument1 rdf:resource="urn:swrl#sc"/>
                         <swrl:argument2 rdf:resource="urn:swrl#com"/>
                     </rdf:Description>
@@ -2312,9 +2311,10 @@
                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
                 <rdf:first>
                     <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Agent"/>
-                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/untitled-ontology-5#ag"/>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#partOf"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/untitled-ontology-5#p1"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/untitled-ontology-5#a"/>
                     </rdf:Description>
                 </rdf:first>
                 <rdf:rest>
@@ -2323,9 +2323,9 @@
                         <rdf:first>
                             <rdf:Description>
                                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#knows"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#belief"/>
                                 <swrl:argument1 rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/untitled-ontology-5#ag"/>
-                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/untitled-ontology-5#a"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/untitled-ontology-5#p1"/>
                             </rdf:Description>
                         </rdf:first>
                         <rdf:rest>
@@ -2334,9 +2334,9 @@
                                 <rdf:first>
                                     <rdf:Description>
                                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#beliefs"/>
-                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/untitled-ontology-5#ag"/>
-                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/untitled-ontology-5#p1"/>
+                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#partOf"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/untitled-ontology-5#p2"/>
+                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/untitled-ontology-5#a"/>
                                     </rdf:Description>
                                 </rdf:first>
                                 <rdf:rest>
@@ -2345,7 +2345,7 @@
                                         <rdf:first>
                                             <rdf:Description>
                                                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#beliefs"/>
+                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#belief"/>
                                                 <swrl:argument1 rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/untitled-ontology-5#ag"/>
                                                 <swrl:argument2 rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/untitled-ontology-5#p2"/>
                                             </rdf:Description>
@@ -2355,10 +2355,9 @@
                                                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
                                                 <rdf:first>
                                                     <rdf:Description>
-                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#IsPartOf"/>
-                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/untitled-ontology-5#p1"/>
-                                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/untitled-ontology-5#a"/>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Agent"/>
+                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/untitled-ontology-5#ag"/>
                                                     </rdf:Description>
                                                 </rdf:first>
                                                 <rdf:rest>
@@ -2367,8 +2366,8 @@
                                                         <rdf:first>
                                                             <rdf:Description>
                                                                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#IsPartOf"/>
-                                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/untitled-ontology-5#p2"/>
+                                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#knowledge"/>
+                                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/untitled-ontology-5#ag"/>
                                                                 <swrl:argument2 rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/untitled-ontology-5#a"/>
                                                             </rdf:Description>
                                                         </rdf:first>
@@ -2410,8 +2409,8 @@
                 <rdf:first>
                     <rdf:Description>
                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Shared"/>
-                        <swrl:argument1 rdf:resource="urn:swrl#s"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#TopAction"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#ta"/>
                     </rdf:Description>
                 </rdf:first>
                 <rdf:rest>
@@ -2419,9 +2418,10 @@
                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
                         <rdf:first>
                             <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#TopAction"/>
-                                <swrl:argument1 rdf:resource="urn:swrl#ta"/>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#partOf"/>
+                                <swrl:argument1 rdf:resource="urn:swrl#s"/>
+                                <swrl:argument2 rdf:resource="urn:swrl#ta"/>
                             </rdf:Description>
                         </rdf:first>
                         <rdf:rest>
@@ -2429,10 +2429,9 @@
                                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
                                 <rdf:first>
                                     <rdf:Description>
-                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#IsPartOf"/>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Shared"/>
                                         <swrl:argument1 rdf:resource="urn:swrl#s"/>
-                                        <swrl:argument2 rdf:resource="urn:swrl#ta"/>
                                     </rdf:Description>
                                 </rdf:first>
                                 <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
@@ -2450,7 +2449,7 @@
                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
                         <swrl:classPredicate>
                             <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#implements"/>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#implementationOf"/>
                                 <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:cardinality>
                             </owl:Restriction>
                         </swrl:classPredicate>
@@ -2471,9 +2470,10 @@
                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
                 <rdf:first>
                     <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Activity"/>
-                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/untitled-ontology-5#p"/>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#belief"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/untitled-ontology-5#ag"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/untitled-ontology-5#pp"/>
                     </rdf:Description>
                 </rdf:first>
                 <rdf:rest>
@@ -2481,9 +2481,10 @@
                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
                         <rdf:first>
                             <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Activity"/>
-                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/untitled-ontology-5#c"/>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#partOf"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/untitled-ontology-5#pp"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/untitled-ontology-5#p"/>
                             </rdf:Description>
                         </rdf:first>
                         <rdf:rest>
@@ -2491,9 +2492,10 @@
                                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
                                 <rdf:first>
                                     <rdf:Description>
-                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Shared"/>
-                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/untitled-ontology-5#sc"/>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#partOf"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/untitled-ontology-5#pc"/>
+                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/untitled-ontology-5#c"/>
                                     </rdf:Description>
                                 </rdf:first>
                                 <rdf:rest>
@@ -2502,9 +2504,9 @@
                                         <rdf:first>
                                             <rdf:Description>
                                                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#IsPartOf"/>
+                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#implementationOf"/>
                                                 <swrl:argument1 rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/untitled-ontology-5#sc"/>
-                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/untitled-ontology-5#c"/>
+                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/untitled-ontology-5#p"/>
                                             </rdf:Description>
                                         </rdf:first>
                                         <rdf:rest>
@@ -2512,9 +2514,10 @@
                                                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
                                                 <rdf:first>
                                                     <rdf:Description>
-                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                                                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Personal"/>
-                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/untitled-ontology-5#pp"/>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#belief"/>
+                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/untitled-ontology-5#ag"/>
+                                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/untitled-ontology-5#pc"/>
                                                     </rdf:Description>
                                                 </rdf:first>
                                                 <rdf:rest>
@@ -2522,10 +2525,9 @@
                                                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
                                                         <rdf:first>
                                                             <rdf:Description>
-                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#IsPartOf"/>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Personal"/>
                                                                 <swrl:argument1 rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/untitled-ontology-5#pp"/>
-                                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/untitled-ontology-5#p"/>
                                                             </rdf:Description>
                                                         </rdf:first>
                                                         <rdf:rest>
@@ -2533,10 +2535,9 @@
                                                                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
                                                                 <rdf:first>
                                                                     <rdf:Description>
-                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#beliefs"/>
-                                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/untitled-ontology-5#ag"/>
-                                                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/untitled-ontology-5#pp"/>
+                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Activity"/>
+                                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/untitled-ontology-5#p"/>
                                                                     </rdf:Description>
                                                                 </rdf:first>
                                                                 <rdf:rest>
@@ -2544,9 +2545,10 @@
                                                                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
                                                                         <rdf:first>
                                                                             <rdf:Description>
-                                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                                                                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Personal"/>
-                                                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/untitled-ontology-5#pc"/>
+                                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#DemotedValue"/>
+                                                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/untitled-ontology-5#pp"/>
+                                                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/untitled-ontology-5#val"/>
                                                                             </rdf:Description>
                                                                         </rdf:first>
                                                                         <rdf:rest>
@@ -2554,10 +2556,9 @@
                                                                                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
                                                                                 <rdf:first>
                                                                                     <rdf:Description>
-                                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                                                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#IsPartOf"/>
-                                                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/untitled-ontology-5#pc"/>
-                                                                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/untitled-ontology-5#c"/>
+                                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                                                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Activity"/>
+                                                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/untitled-ontology-5#c"/>
                                                                                     </rdf:Description>
                                                                                 </rdf:first>
                                                                                 <rdf:rest>
@@ -2566,9 +2567,9 @@
                                                                                         <rdf:first>
                                                                                             <rdf:Description>
                                                                                                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                                                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#implements"/>
+                                                                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#partOf"/>
                                                                                                 <swrl:argument1 rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/untitled-ontology-5#sc"/>
-                                                                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/untitled-ontology-5#p"/>
+                                                                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/untitled-ontology-5#c"/>
                                                                                             </rdf:Description>
                                                                                         </rdf:first>
                                                                                         <rdf:rest>
@@ -2576,10 +2577,9 @@
                                                                                                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
                                                                                                 <rdf:first>
                                                                                                     <rdf:Description>
-                                                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                                                                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#beliefs"/>
-                                                                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/untitled-ontology-5#ag"/>
-                                                                                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/untitled-ontology-5#pc"/>
+                                                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                                                                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Personal"/>
+                                                                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/untitled-ontology-5#pc"/>
                                                                                                     </rdf:Description>
                                                                                                 </rdf:first>
                                                                                                 <rdf:rest>
@@ -2587,10 +2587,9 @@
                                                                                                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
                                                                                                         <rdf:first>
                                                                                                             <rdf:Description>
-                                                                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                                                                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#DemotedValue"/>
-                                                                                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/untitled-ontology-5#pp"/>
-                                                                                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/untitled-ontology-5#val"/>
+                                                                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                                                                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Shared"/>
+                                                                                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/untitled-ontology-5#sc"/>
                                                                                                             </rdf:Description>
                                                                                                         </rdf:first>
                                                                                                         <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
@@ -2643,9 +2642,10 @@
                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
                 <rdf:first>
                     <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Activity"/>
-                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/untitled-ontology-5#p"/>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#belief"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/untitled-ontology-5#ag"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/untitled-ontology-5#pp"/>
                     </rdf:Description>
                 </rdf:first>
                 <rdf:rest>
@@ -2653,9 +2653,10 @@
                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
                         <rdf:first>
                             <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Activity"/>
-                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/untitled-ontology-5#c"/>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#partOf"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/untitled-ontology-5#pp"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/untitled-ontology-5#p"/>
                             </rdf:Description>
                         </rdf:first>
                         <rdf:rest>
@@ -2663,9 +2664,10 @@
                                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
                                 <rdf:first>
                                     <rdf:Description>
-                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Shared"/>
-                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/untitled-ontology-5#sc"/>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#partOf"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/untitled-ontology-5#pc"/>
+                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/untitled-ontology-5#c"/>
                                     </rdf:Description>
                                 </rdf:first>
                                 <rdf:rest>
@@ -2674,9 +2676,9 @@
                                         <rdf:first>
                                             <rdf:Description>
                                                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#IsPartOf"/>
+                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#implementationOf"/>
                                                 <swrl:argument1 rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/untitled-ontology-5#sc"/>
-                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/untitled-ontology-5#c"/>
+                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/untitled-ontology-5#p"/>
                                             </rdf:Description>
                                         </rdf:first>
                                         <rdf:rest>
@@ -2684,9 +2686,10 @@
                                                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
                                                 <rdf:first>
                                                     <rdf:Description>
-                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                                                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Personal"/>
-                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/untitled-ontology-5#pp"/>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#belief"/>
+                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/untitled-ontology-5#ag"/>
+                                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/untitled-ontology-5#pc"/>
                                                     </rdf:Description>
                                                 </rdf:first>
                                                 <rdf:rest>
@@ -2694,10 +2697,9 @@
                                                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
                                                         <rdf:first>
                                                             <rdf:Description>
-                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#IsPartOf"/>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Personal"/>
                                                                 <swrl:argument1 rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/untitled-ontology-5#pp"/>
-                                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/untitled-ontology-5#p"/>
                                                             </rdf:Description>
                                                         </rdf:first>
                                                         <rdf:rest>
@@ -2705,10 +2707,9 @@
                                                                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
                                                                 <rdf:first>
                                                                     <rdf:Description>
-                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#beliefs"/>
-                                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/untitled-ontology-5#ag"/>
-                                                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/untitled-ontology-5#pp"/>
+                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Activity"/>
+                                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/untitled-ontology-5#p"/>
                                                                     </rdf:Description>
                                                                 </rdf:first>
                                                                 <rdf:rest>
@@ -2717,8 +2718,8 @@
                                                                         <rdf:first>
                                                                             <rdf:Description>
                                                                                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                                                                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Personal"/>
-                                                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/untitled-ontology-5#pc"/>
+                                                                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Activity"/>
+                                                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/untitled-ontology-5#c"/>
                                                                             </rdf:Description>
                                                                         </rdf:first>
                                                                         <rdf:rest>
@@ -2727,8 +2728,8 @@
                                                                                 <rdf:first>
                                                                                     <rdf:Description>
                                                                                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                                                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#IsPartOf"/>
-                                                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/untitled-ontology-5#pc"/>
+                                                                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#partOf"/>
+                                                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/untitled-ontology-5#sc"/>
                                                                                         <swrl:argument2 rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/untitled-ontology-5#c"/>
                                                                                     </rdf:Description>
                                                                                 </rdf:first>
@@ -2737,10 +2738,9 @@
                                                                                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
                                                                                         <rdf:first>
                                                                                             <rdf:Description>
-                                                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                                                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#implements"/>
-                                                                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/untitled-ontology-5#sc"/>
-                                                                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/untitled-ontology-5#p"/>
+                                                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                                                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Personal"/>
+                                                                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/untitled-ontology-5#pc"/>
                                                                                             </rdf:Description>
                                                                                         </rdf:first>
                                                                                         <rdf:rest>
@@ -2748,10 +2748,9 @@
                                                                                                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
                                                                                                 <rdf:first>
                                                                                                     <rdf:Description>
-                                                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                                                                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#beliefs"/>
-                                                                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/untitled-ontology-5#ag"/>
-                                                                                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/untitled-ontology-5#pc"/>
+                                                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                                                                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Shared"/>
+                                                                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/untitled-ontology-5#sc"/>
                                                                                                     </rdf:Description>
                                                                                                 </rdf:first>
                                                                                                 <rdf:rest>
@@ -2815,9 +2814,10 @@
                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
                 <rdf:first>
                     <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Activity"/>
-                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/untitled-ontology-5#p"/>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#affordance"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/untitled-ontology-5#sp"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/untitled-ontology-5#aff"/>
                     </rdf:Description>
                 </rdf:first>
                 <rdf:rest>
@@ -2826,8 +2826,8 @@
                         <rdf:first>
                             <rdf:Description>
                                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Activity"/>
-                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/untitled-ontology-5#c"/>
+                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Shared"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/untitled-ontology-5#sp"/>
                             </rdf:Description>
                         </rdf:first>
                         <rdf:rest>
@@ -2835,9 +2835,10 @@
                                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
                                 <rdf:first>
                                     <rdf:Description>
-                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Shared"/>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#implementationOf"/>
                                         <swrl:argument1 rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/untitled-ontology-5#sc"/>
+                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/untitled-ontology-5#p"/>
                                     </rdf:Description>
                                 </rdf:first>
                                 <rdf:rest>
@@ -2845,10 +2846,9 @@
                                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
                                         <rdf:first>
                                             <rdf:Description>
-                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#IsPartOf"/>
-                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/untitled-ontology-5#sc"/>
-                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/untitled-ontology-5#c"/>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Activity"/>
+                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/untitled-ontology-5#p"/>
                                             </rdf:Description>
                                         </rdf:first>
                                         <rdf:rest>
@@ -2856,10 +2856,9 @@
                                                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
                                                 <rdf:first>
                                                     <rdf:Description>
-                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#implements"/>
-                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/untitled-ontology-5#sc"/>
-                                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/untitled-ontology-5#p"/>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Activity"/>
+                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/untitled-ontology-5#c"/>
                                                     </rdf:Description>
                                                 </rdf:first>
                                                 <rdf:rest>
@@ -2867,9 +2866,10 @@
                                                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
                                                         <rdf:first>
                                                             <rdf:Description>
-                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                                                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Shared"/>
-                                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/untitled-ontology-5#sp"/>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#partOf"/>
+                                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/untitled-ontology-5#sc"/>
+                                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/untitled-ontology-5#c"/>
                                                             </rdf:Description>
                                                         </rdf:first>
                                                         <rdf:rest>
@@ -2878,7 +2878,7 @@
                                                                 <rdf:first>
                                                                     <rdf:Description>
                                                                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#IsPartOf"/>
+                                                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#partOf"/>
                                                                         <swrl:argument1 rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/untitled-ontology-5#sp"/>
                                                                         <swrl:argument2 rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/untitled-ontology-5#p"/>
                                                                     </rdf:Description>
@@ -2888,10 +2888,9 @@
                                                                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
                                                                         <rdf:first>
                                                                             <rdf:Description>
-                                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#affordance"/>
-                                                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/untitled-ontology-5#sp"/>
-                                                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/untitled-ontology-5#aff"/>
+                                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Shared"/>
+                                                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/untitled-ontology-5#sc"/>
                                                                             </rdf:Description>
                                                                         </rdf:first>
                                                                         <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
