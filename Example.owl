@@ -1,0 +1,53 @@
+Prefix(:=<http://www.semanticweb.org/jobl/ontologies/2017/10/untitled-ontology-27#>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+
+
+Ontology(<http://www.semanticweb.org/jobl/ontologies/2017/10/untitled-ontology-27>
+
+Declaration(Class(:Father))
+Declaration(Class(:Man))
+Declaration(Class(:Mother))
+Declaration(Class(:Parent))
+Declaration(Class(:Person))
+Declaration(Class(:Woman))
+Declaration(ObjectProperty(:hasChild))
+Declaration(NamedIndividual(:LARS))
+Declaration(NamedIndividual(:MARY))
+
+############################
+#   Classes
+############################
+
+# Class: :Father (:Father)
+
+EquivalentClasses(:Father ObjectIntersectionOf(:Man ObjectSomeValuesFrom(:hasChild :Person)))
+
+# Class: :Mother (:Mother)
+
+EquivalentClasses(:Mother ObjectIntersectionOf(:Woman ObjectSomeValuesFrom(:hasChild :Person)))
+
+# Class: :Parent (:Parent)
+
+EquivalentClasses(:Parent ObjectUnionOf(:Father :Mother))
+SubClassOf(:Parent :Person)
+
+
+############################
+#   Named Individuals
+############################
+
+# Individual: :LARS (:LARS)
+
+ClassAssertion(:Person :LARS)
+
+# Individual: :MARY (:MARY)
+
+ClassAssertion(:Woman :MARY)
+ObjectPropertyAssertion(:hasChild :MARY :LARS)
+
+
+)
