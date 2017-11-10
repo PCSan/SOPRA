@@ -1048,6 +1048,27 @@
     
 
 
+    <!-- http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Secretary -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Secretary">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Agent"/>
+        <SoPrA:belief rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Secretary_Contact_ER"/>
+        <SoPrA:knowledge rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Contact_ER"/>
+        <SoPrA:ownedCompetence rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#RegisterPatient"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Secretary_Contact_ER -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Secretary_Contact_ER">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Personal"/>
+        <SoPrA:partOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Contact_ER"/>
+        <SoPrA:trigger rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Patient"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Shared_Acute_Treatment -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Shared_Acute_Treatment">
