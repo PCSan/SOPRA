@@ -1104,6 +1104,7 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Shared_Contact_ER">
         <rdf:type rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Shared"/>
         <SoPrA:affordance rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#ER"/>
+        <SoPrA:affordance rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#OHN_Phone"/>
         <SoPrA:implementsPartOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Acute_Treatment"/>
         <SoPrA:partOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Contact_ER"/>
         <SoPrA:requiredCompetence rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#RegisterPatient"/>
