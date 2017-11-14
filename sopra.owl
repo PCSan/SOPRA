@@ -403,9 +403,9 @@
     
 
 
-    <!-- http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Assign_Nurse -->
+    <!-- http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Assign_Staff -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Assign_Nurse">
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Assign_Staff">
         <rdf:type rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#AbstractAction"/>
     </owl:NamedIndividual>
     
@@ -1106,12 +1106,12 @@
     
 
 
-    <!-- http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Shared_Assign_Nurse -->
+    <!-- http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Shared_Assign_Staff -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Shared_Assign_Nurse">
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Shared_Assign_Staff">
         <rdf:type rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Shared"/>
         <SoPrA:implementsPartOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Triage"/>
-        <SoPrA:partOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Assign_Nurse"/>
+        <SoPrA:partOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Assign_Staff"/>
     </owl:NamedIndividual>
     
 
@@ -1241,7 +1241,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Shared_NurseTriage">
         <rdf:type rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Shared"/>
-        <SoPrA:implementsAllOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Assign_Nurse"/>
+        <SoPrA:implementsAllOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Assign_Staff"/>
         <SoPrA:partOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#NurseTriage"/>
     </owl:NamedIndividual>
     
@@ -1282,7 +1282,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Shared_THNTriage">
         <rdf:type rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Shared"/>
-        <SoPrA:implementsAllOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Assign_Nurse"/>
+        <SoPrA:implementsAllOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Assign_Staff"/>
         <SoPrA:partOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#THNTriage"/>
     </owl:NamedIndividual>
     
@@ -1312,7 +1312,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Shared_TraineeTriage">
         <rdf:type rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Shared"/>
-        <SoPrA:implementsAllOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Assign_Nurse"/>
+        <SoPrA:implementsAllOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Assign_Staff"/>
         <SoPrA:partOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#TraineeTriage"/>
         <SoPrA:requiredCompetence rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#SocialSkills"/>
         <SoPrA:requiredCompetence rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#TriageExperience"/>
@@ -1370,7 +1370,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Agent"/>
         <SoPrA:adheredValue rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Education"/>
         <SoPrA:adheredValue rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Professional"/>
-        <SoPrA:belief rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#THN_D_Assign_Nurse"/>
+        <SoPrA:belief rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#THN_D_Assign_Staff"/>
         <SoPrA:belief rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#THN_D_NurseTriage"/>
         <SoPrA:belief rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#THN_D_THNTriage"/>
         <SoPrA:belief rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#THN_D_Take_Patient"/>
@@ -1390,11 +1390,11 @@
     
 
 
-    <!-- http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#THN_D_Assign_Nurse -->
+    <!-- http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#THN_D_Assign_Staff -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#THN_D_Assign_Nurse">
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#THN_D_Assign_Staff">
         <rdf:type rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Personal"/>
-        <SoPrA:partOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Assign_Nurse"/>
+        <SoPrA:partOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Assign_Staff"/>
     </owl:NamedIndividual>
     
 
@@ -1506,7 +1506,7 @@
         <SoPrA:adheredValue rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Education"/>
         <SoPrA:adheredValue rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Professional"/>
         <SoPrA:belief rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#THN_Inform_Team_On_Medical"/>
-        <SoPrA:belief rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#THN_M_Assign_Nurse"/>
+        <SoPrA:belief rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#THN_M_Assign_Staff"/>
         <SoPrA:belief rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#THN_M_NurseTriage"/>
         <SoPrA:belief rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#THN_M_THNTriage"/>
         <SoPrA:belief rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#THN_M_Take_Patient"/>
@@ -1525,11 +1525,11 @@
     
 
 
-    <!-- http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#THN_M_Assign_Nurse -->
+    <!-- http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#THN_M_Assign_Staff -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#THN_M_Assign_Nurse">
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#THN_M_Assign_Staff">
         <rdf:type rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Personal"/>
-        <SoPrA:partOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Assign_Nurse"/>
+        <SoPrA:partOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Assign_Staff"/>
     </owl:NamedIndividual>
     
 
@@ -1608,7 +1608,7 @@
         <SoPrA:adheredValue rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Education"/>
         <SoPrA:adheredValue rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Professional"/>
         <SoPrA:belief rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#THN_Inform_Team_On_Surgical"/>
-        <SoPrA:belief rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#THN_S_Assign_Nurse"/>
+        <SoPrA:belief rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#THN_S_Assign_Staff"/>
         <SoPrA:belief rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#THN_S_NurseTriage"/>
         <SoPrA:belief rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#THN_S_THNTriage"/>
         <SoPrA:belief rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#THN_S_Take_Patient"/>
@@ -1627,11 +1627,11 @@
     
 
 
-    <!-- http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#THN_S_Assign_Nurse -->
+    <!-- http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#THN_S_Assign_Staff -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#THN_S_Assign_Nurse">
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#THN_S_Assign_Staff">
         <rdf:type rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Personal"/>
-        <SoPrA:partOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Assign_Nurse"/>
+        <SoPrA:partOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Assign_Staff"/>
     </owl:NamedIndividual>
     
 
@@ -1868,7 +1868,7 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
         <owl:distinctMembers rdf:parseType="Collection">
             <rdf:Description rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Acute_Treatment"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Assign_Nurse"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Assign_Staff"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Assign_To_Team"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Contact_ER"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Damage"/>
@@ -1934,7 +1934,7 @@
             <rdf:Description rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Professional"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#RegisterPatient"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Shared_Acute_Treatment"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Shared_Assign_Nurse"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Shared_Assign_Staff"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Shared_Assign_To_Team"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Shared_Contact_ER"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Shared_Damage"/>
@@ -1960,7 +1960,7 @@
             <rdf:Description rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Surgical"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#THNTriage"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#THN_D"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#THN_D_Assign_Nurse"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#THN_D_Assign_Staff"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#THN_D_NurseTriage"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#THN_D_THNTriage"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#THN_D_Take_Patient"/>
@@ -1972,7 +1972,7 @@
             <rdf:Description rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#THN_Inform_Team_On_Medical"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#THN_Inform_Team_On_Surgical"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#THN_M"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#THN_M_Assign_Nurse"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#THN_M_Assign_Staff"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#THN_M_NurseTriage"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#THN_M_THNTriage"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#THN_M_Take_Patient"/>
@@ -1981,7 +1981,7 @@
             <rdf:Description rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#THN_M_Treatment"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#THN_M_Triage"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#THN_S"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#THN_S_Assign_Nurse"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#THN_S_Assign_Staff"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#THN_S_NurseTriage"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#THN_S_THNTriage"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#THN_S_Take_Patient"/>
