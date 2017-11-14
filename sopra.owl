@@ -43,6 +43,16 @@
     
 
 
+    <!-- http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#adheredValue -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#adheredValue">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Agent"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Value"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#affordance -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#affordance">
@@ -220,16 +230,6 @@
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Personal"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#ContextElement"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#valueAdherence -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#valueAdherence">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Agent"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Value"/>
     </owl:ObjectProperty>
     
 
@@ -775,6 +775,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#OHN">
         <rdf:type rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Agent"/>
+        <SoPrA:adheredValue rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Professional"/>
         <SoPrA:belief rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#OHN_Acute_Treatment"/>
         <SoPrA:belief rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#OHN_Assign_To_Team"/>
         <SoPrA:belief rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#OHN_Contact_ER"/>
@@ -803,7 +804,6 @@
         <SoPrA:knowledge rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Inform_Team_On_Surgical"/>
         <SoPrA:knowledge rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Medical"/>
         <SoPrA:knowledge rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Surgical"/>
-        <SoPrA:valueAdherence rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Professional"/>
     </owl:NamedIndividual>
     
 
@@ -943,6 +943,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Patient">
         <rdf:type rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Agent"/>
+        <SoPrA:adheredValue rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Health"/>
         <SoPrA:belief rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Patient_Acute_Treatment"/>
         <SoPrA:belief rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Patient_Contact_ER"/>
         <SoPrA:belief rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Patient_Inform_Patient_On_Damage"/>
@@ -955,7 +956,6 @@
         <SoPrA:knowledge rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Inform_Patient_On_Medical"/>
         <SoPrA:knowledge rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Inform_Patient_On_Surgical"/>
         <SoPrA:knowledge rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Take_Patient"/>
-        <SoPrA:valueAdherence rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Health"/>
     </owl:NamedIndividual>
     
 
@@ -1368,6 +1368,8 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#THN_D">
         <rdf:type rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Agent"/>
+        <SoPrA:adheredValue rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Education"/>
+        <SoPrA:adheredValue rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Professional"/>
         <SoPrA:belief rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#THN_D_Assign_Staff"/>
         <SoPrA:belief rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#THN_D_NurseTriage"/>
         <SoPrA:belief rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#THN_D_THNTriage"/>
@@ -1384,8 +1386,6 @@
         <SoPrA:knowledge rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#TraineeTriage"/>
         <SoPrA:knowledge rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Treatment"/>
         <SoPrA:knowledge rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Triage"/>
-        <SoPrA:valueAdherence rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Education"/>
-        <SoPrA:valueAdherence rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Professional"/>
     </owl:NamedIndividual>
     
 
@@ -1503,6 +1503,8 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#THN_M">
         <rdf:type rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Agent"/>
+        <SoPrA:adheredValue rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Education"/>
+        <SoPrA:adheredValue rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Professional"/>
         <SoPrA:belief rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#THN_Inform_Team_On_Medical"/>
         <SoPrA:belief rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#THN_M_Assign_Staff"/>
         <SoPrA:belief rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#THN_M_NurseTriage"/>
@@ -1519,8 +1521,6 @@
         <SoPrA:knowledge rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#TraineeTriage"/>
         <SoPrA:knowledge rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Treatment"/>
         <SoPrA:knowledge rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Triage"/>
-        <SoPrA:valueAdherence rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Education"/>
-        <SoPrA:valueAdherence rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Professional"/>
     </owl:NamedIndividual>
     
 
@@ -1605,6 +1605,8 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#THN_S">
         <rdf:type rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Agent"/>
+        <SoPrA:adheredValue rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Education"/>
+        <SoPrA:adheredValue rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Professional"/>
         <SoPrA:belief rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#THN_Inform_Team_On_Surgical"/>
         <SoPrA:belief rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#THN_S_Assign_Staff"/>
         <SoPrA:belief rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#THN_S_NurseTriage"/>
@@ -1621,8 +1623,6 @@
         <SoPrA:knowledge rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Take_Trainee"/>
         <SoPrA:knowledge rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#TraineeTriage"/>
         <SoPrA:knowledge rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Treatment"/>
-        <SoPrA:valueAdherence rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Education"/>
-        <SoPrA:valueAdherence rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Professional"/>
     </owl:NamedIndividual>
     
 
@@ -1751,6 +1751,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Trainee_Experienced">
         <rdf:type rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Agent"/>
+        <SoPrA:adheredValue rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Education"/>
         <SoPrA:belief rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Trainee_E_Take_Trainee"/>
         <SoPrA:belief rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Trainee_E_TrineeTriage"/>
         <SoPrA:belief rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Trainee_Take_Patient"/>
@@ -1758,7 +1759,6 @@
         <SoPrA:hasCompetence rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#TriageExperience"/>
         <SoPrA:knowledge rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Take_Trainee"/>
         <SoPrA:knowledge rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#TraineeTriage"/>
-        <SoPrA:valueAdherence rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Education"/>
     </owl:NamedIndividual>
     
 
@@ -1787,11 +1787,11 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Trainee_New">
         <rdf:type rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Agent"/>
+        <SoPrA:adheredValue rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Education"/>
         <SoPrA:belief rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Trainee_N_Take_Trainee"/>
         <SoPrA:hasCompetence rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#SocialSkills"/>
         <SoPrA:knowledge rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Take_Trainee"/>
         <SoPrA:knowledge rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#TraineeTriage"/>
-        <SoPrA:valueAdherence rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Education"/>
     </owl:NamedIndividual>
     
 
@@ -2008,6 +2008,7 @@
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointProperties"/>
         <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#adheredValue"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#affordance"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#belief"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#hasCompetence"/>
@@ -2021,7 +2022,6 @@
             <rdf:Description rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#requiredCompetence"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#strategy"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#trigger"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#valueAdherence"/>
         </owl:members>
     </rdf:Description>
     
