@@ -435,10 +435,63 @@
     
 
 
-    <!-- http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Diagnoses -->
+    <!-- http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Diagnosing -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Diagnoses">
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Diagnosing">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Competence"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Diagnosis -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Diagnosis">
         <rdf:type rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#AbstractAction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Doctor -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Doctor">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Agent"/>
+        <SoPrA:belief rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Doctor_Diagnosis"/>
+        <SoPrA:belief rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Doctor_Perform_Tests"/>
+        <SoPrA:belief rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Doctor_Plan"/>
+        <SoPrA:hasCompetence rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Diagnosing"/>
+        <SoPrA:hasCompetence rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#TreatmentPlanning"/>
+        <SoPrA:knowledge rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Diagnosis"/>
+        <SoPrA:knowledge rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Perform_Tests"/>
+        <SoPrA:knowledge rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Plan"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Doctor_Diagnosis -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Doctor_Diagnosis">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Personal"/>
+        <SoPrA:partOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Diagnosis"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Doctor_Perform_Tests -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Doctor_Perform_Tests">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Personal"/>
+        <SoPrA:partOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Perform_Tests"/>
+        <SoPrA:strategy rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Diagnosis"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Doctor_Plan -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Doctor_Plan">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Personal"/>
+        <SoPrA:partOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Plan"/>
+        <SoPrA:strategy rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Treatment"/>
     </owl:NamedIndividual>
     
 
@@ -974,33 +1027,6 @@
     
 
 
-    <!-- http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Personal1_Diagnoses -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Personal1_Diagnoses">
-        <rdf:type rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Personal"/>
-        <SoPrA:partOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Diagnoses"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Personal1_Perform_Tests -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Personal1_Perform_Tests">
-        <rdf:type rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Personal"/>
-        <SoPrA:partOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Perform_Tests"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Personal1_Plan -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Personal1_Plan">
-        <rdf:type rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Personal"/>
-        <SoPrA:partOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Plan"/>
-    </owl:NamedIndividual>
-    
-
-
     <!-- http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Phone_Damage_Team -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Phone_Damage_Team">
@@ -1124,12 +1150,13 @@
     
 
 
-    <!-- http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Shared_Diagnoses -->
+    <!-- http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Shared_Diagnosis -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Shared_Diagnoses">
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Shared_Diagnosis">
         <rdf:type rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Shared"/>
         <SoPrA:implementsPartOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Treatment"/>
-        <SoPrA:partOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Diagnoses"/>
+        <SoPrA:partOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Diagnosis"/>
+        <SoPrA:requiredCompetence rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Diagnosing"/>
     </owl:NamedIndividual>
     
 
@@ -1224,7 +1251,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Shared_Perform_Tests">
         <rdf:type rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Shared"/>
-        <SoPrA:implementsPartOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Diagnoses"/>
+        <SoPrA:implementsPartOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Diagnosis"/>
         <SoPrA:partOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Perform_Tests"/>
     </owl:NamedIndividual>
     
@@ -1236,6 +1263,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Shared"/>
         <SoPrA:implementsPartOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Treatment"/>
         <SoPrA:partOf rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Plan"/>
+        <SoPrA:requiredCompetence rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#TreatmentPlanning"/>
     </owl:NamedIndividual>
     
 
@@ -1785,6 +1813,14 @@
     
 
 
+    <!-- http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#TreatmentPlanning -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#TreatmentPlanning">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Competence"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Triage -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Triage">
@@ -1836,7 +1872,10 @@
             <rdf:Description rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Assign_To_Team"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Contact_ER"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Damage"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Diagnoses"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Diagnosis"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Doctor_Diagnosis"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Doctor_Perform_Tests"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Doctor_Plan"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#ER"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Education"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#HasDamageTHNContact"/>
@@ -1888,9 +1927,6 @@
             <rdf:Description rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Patient_Inform_Patient_On_Surgical"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Patient_Take_Patient"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Perform_Tests"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Personal1_Diagnoses"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Personal1_Perform_Tests"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Personal1_Plan"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Phone_Damage_Team"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Phone_Medical_Team"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Phone_Surgical_Team"/>
@@ -1902,7 +1938,7 @@
             <rdf:Description rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Shared_Assign_To_Team"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Shared_Contact_ER"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Shared_Damage"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Shared_Diagnoses"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Shared_Diagnosis"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Shared_Inform_Patient_On_Damage"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Shared_Inform_Patient_On_Medical"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Shared_Inform_Patient_On_Surgical"/>
