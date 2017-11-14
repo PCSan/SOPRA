@@ -1763,6 +1763,7 @@
         <SoPrA:belief rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Trainee_N_Take_Trainee"/>
         <SoPrA:knowledge rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#Take_Trainee"/>
         <SoPrA:knowledge rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#TraineeTriage"/>
+        <SoPrA:ownedCompetence rdf:resource="http://www.semanticweb.org/rijk/ontologies/2017/9/SoPrA#SocialSkills"/>
     </owl:NamedIndividual>
     
 
